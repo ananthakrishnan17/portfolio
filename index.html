@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anantha Krishnan | ASP.NET & Flutter Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0a192f;
+  --accent:#64ffda;
+  --text:#ccd6f6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;scroll-behavior:smooth;}
+a{text-decoration:none;color:var(--text);}
+
+/* Sidebar */
+.sidebar{
+  position:fixed;left:0;top:0;height:100vh;width:230px;
+  background:#112240;display:flex;flex-direction:column;
+  padding:30px 20px;z-index:200;transition:transform .3s;
+}
+.sidebar .logo{font-family:'Poppins',sans-serif;font-size:1.6rem;color:var(--accent);margin-bottom:40px;}
+.sidebar ul{list-style:none;display:flex;flex-direction:column;gap:25px;}
+.sidebar ul li a{font-size:1.1rem;}
+.sidebar ul li a:hover{color:var(--accent);}
+.hamburger{
+  position:fixed;left:15px;top:15px;z-index:300;
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+}
+.hamburger span{height:3px;width:25px;background:var(--accent);transition:.3s;}
+main{margin-left:230px;padding:0;}
+@media(max-width:900px){
+  .sidebar{transform:translateX(-230px);}
+  .sidebar.show{transform:translateX(0);}
+  .hamburger{display:flex;}
+  main{margin-left:0;}
+}
+
+/* Sections */
+section{max-width:1100px;margin:auto;padding:70px 20px;}
+h2.section-title{text-align:center;font-size:2rem;color:var(--accent);margin-bottom:40px;}
+header{
+  min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;padding:0 20px;
+}
+header h1{font-size:2.8rem;font-family:'Poppins',sans-serif;margin-bottom:10px;}
+header h2{font-size:1.3rem;margin-bottom:20px;color:var(--accent);}
+.btn-primary{padding:12px 25px;border:2px solid var(--accent);color:var(--accent);border-radius:5px;transition:0.3s;}
+.btn-primary:hover{background:var(--accent);color:var(--bg);}
+
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:40px;justify-content:center;}
+.about img{width:260px;border-radius:50%;border:4px solid var(--accent);}
+.about p{line-height:1.6;font-size:1.1rem;}
+
+.item{background:#112240;border-radius:10px;padding:20px;margin-bottom:20px;}
+.item h3{color:var(--accent);margin-bottom:10px;}
+.item p{line-height:1.5;}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.skill{background:#112240;border-radius:10px;padding:20px;text-align:center;}
+.skill h4{color:var(--accent);margin-bottom:10px;}
+
+.contact form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+.contact input,.contact textarea{
+  padding:10px;border-radius:5px;border:1px solid #233554;background:#0a192f;color:var(--text);
+}
+.contact button{background:var(--accent);color:var(--bg);border:none;padding:12px;font-weight:bold;
+  cursor:pointer;border-radius:5px;transition:0.3s;}
+.contact button:hover{opacity:0.9;}
+
+footer{text-align:center;padding:20px;background:#112240;}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">AK</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="AnanthaKrishnan.pdf" download>Resume</a></li>
+  </ul>
+</div>
+<div class="hamburger"><span></span><span></span><span></span></div>
+
+<main>
+<!-- Hero -->
+<header id="home">
+  <h1>Hi, I'm <span style="color:var(--accent)">Anantha Krishnan</span></h1>
+  <h2>ASP.NET Full-Stack & Flutter Mobile Developer</h2>
+  <a href="#projects" class="btn-primary">View My Work</a>
+</header>
+
+<!-- About -->
+<section id="about" data-aos="fade-up">
+  <h2 class="section-title">Career Summary</h2>
+  <div class="about">
+    <img src="https://via.placeholder.com/260" alt="Profile">
+    <p>
+      Full Stack Developer specialized in <strong>ASP.NET MVC / C#</strong> for scalable web apps  
+      and <strong>Flutter</strong> for enterprise mobile solutions.  
+      Proven track record of building secure APIs, SQL Server optimization,  
+      and delivering apps that significantly boost operational efficiency and customer sales.
+    </p>
+  </div>
+</section>
+
+<!-- Work Experience -->
+<section id="work" data-aos="fade-up">
+  <h2 class="section-title">Work Experience</h2>
+  <div class="item">
+    <h3>Software Developer – Kassapos Software Solutions (Sep 2024 – Present)</h3>
+    <p>
+      • Developed and deployed ERP modules using ASP.NET MVC & SQL Server, improving operational speed by 40%.<br>
+      • Optimized database access with Dapper, cutting query time by 35%.<br>
+      • Implemented AJAX-driven UI components for 30% faster user interaction.
+    </p>
+  </div>
+  <div class="item">
+    <h3>Software Developer Intern – Sathish System Pvt Ltd (Sep 2023 – May 2024)</h3>
+    <p>
+      • Built Exam Management System using Laravel & MySQL following MVC principles.<br>
+      • Designed responsive UI and interactive forms.
+    </p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" data-aos="fade-up">
+  <h2 class="section-title">Key Projects</h2>
+  <div class="item">
+    <h3>Logistics CRM & Mobile App</h3>
+    <p>
+      Designed and developed a <strong>Flutter-based mobile application</strong> backed by an <strong>ASP.NET MVC CRM system</strong>  
+      for a Malaysia-based logistics company.  
+      • Automated booking, shipment tracking, and customer notifications.<br>
+      • Achieved <strong>50% reduction</strong> in manual processing and boosted <strong>customer sales by 30%</strong> through faster quote-to-order cycle.<br>
+      • Integrated with third-party accounting, improving financial accuracy and monthly reconciliation speed.
+    </p>
+  </div>
+  <div class="item">
+    <h3>AI-Powered POS (In Progress)</h3>
+    <p>
+      Smart billing system combining ASP.NET backend and planned Flutter mobile interface with OpenAI integration for intelligent product suggestions.
+    </p>
+  </div>
+</section>
+
+<div class="skills">
+  <div class="skill"><h4>Backend</h4><p>ASP.NET MVC, C#, REST APIs, Dapper, SQL Server</p></div>
+  <div class="skill"><h4>Mobile</h4><p>Flutter, Dart, Firebase</p></div>
+  <div class="skill"><h4>Languages</h4>
+       <p>Tamil (Native), English (Professional), Japanese (Currently N4 Level)</p>
+  </div>
+  <div class="skill"><h4>Tools</h4><p>Git, Postman, Visual Studio, VS Code</p></div>
+</div>
+
+<!-- Education & Achievements -->
+<section id="education" data-aos="fade-up">
+  <h2 class="section-title">Education & Achievements</h2>
+
+  <div class="item">
+    <h3>BE – Computer Science & Engineering</h3>
+    <p>
+      Anna University Regional Campus, Tirunelveli – 2019-2023 | GPA 7.93/10 <br>
+      <strong>Mini Project:</strong> Hand Gesture Recognition using Machine Learning. <br>
+      <strong>Awards:</strong> Won <strong>1st Prize</strong> at University Expo for the mini project. <br>
+      <strong>Leadership:</strong> Organiser for Cultural Events during college fests.
+    </p>
+  </div>
+  <div class="item">
+    <h3>Japanese Language – Hayakawa Japanese School</h3>
+    <p>
+      Completed Basic Course with certification and <strong>currently pursuing N4 level</strong>.  
+      Skills: Conversational Japanese, Reading & Writing Hiragana/Katakana, Basic Kanji.
+    </p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" data-aos="fade-up">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>&copy; 2025 Anantha Krishnan. All Rights Reserved.</footer>
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000});
+const ham=document.querySelector('.hamburger');
+const sidebar=document.querySelector('.sidebar');
+ham.addEventListener('click',()=>sidebar.classList.toggle('show'));
+</script>
+</body>
+</html>
