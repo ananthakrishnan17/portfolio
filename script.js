@@ -361,19 +361,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const gridView = document.getElementById('projects-grid-view');
 
   const TOTAL_CARDS = cylinderCards.length;
-  const RADIUS = 460;
+  const getRadius = () => {
+    if (window.innerWidth < 480) return 210;
+    if (window.innerWidth < 768) return 260;
+    return 460;
+  };
+
   let cylinderAngle = 0;
   let targetAngle = 0;
   let isDragging = false;
   let startX = 0;
   let autoRotate = true;
 
-  cylinderCards.forEach((card, idx) => {
-    const cardAngle = (idx / TOTAL_CARDS) * 360;
-    card.style.transform = `rotateY(${cardAngle}deg) translateZ(${RADIUS}px)`;
-  });
+  function layoutCylinderCards() {
+    const r = getRadius();
+    cylinderCards.forEach((card, idx) => {
+      const cardAngle = (idx / TOTAL_CARDS) * 360;
+      card.style.transform = `rotateY(${cardAngle}deg) translateZ(${r}px)`;
+    });
+  }
+  layoutCylinderCards();
+  window.addEventListener('resize', layoutCylinderCards);
 
-  if (cylinderRing) {
+  if (cylinderRing && cylinderViewport) {
+    // Desktop Mouse Drag
     window.addEventListener('mousedown', (e) => {
       if (e.target.closest('#cylinder-viewport')) {
         isDragging = true;
@@ -397,6 +408,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Mobile / Touch Drag & Swipe Support
+    let touchStartX = 0;
+    let isTouching = false;
+
+    cylinderViewport.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length > 0) {
+        isTouching = true;
+        touchStartX = e.touches[0].clientX;
+        autoRotate = false;
+      }
+    }, { passive: true });
+
+    cylinderViewport.addEventListener('touchmove', (e) => {
+      if (!isTouching || !e.touches || e.touches.length === 0) return;
+      const currentX = e.touches[0].clientX;
+      const deltaX = currentX - touchStartX;
+      touchStartX = currentX;
+      targetAngle += deltaX * 0.45;
+    }, { passive: true });
+
+    const endTouch = () => {
+      if (isTouching) {
+        isTouching = false;
+        setTimeout(() => (autoRotate = true), 2500);
+      }
+    };
+    cylinderViewport.addEventListener('touchend', endTouch);
+    cylinderViewport.addEventListener('touchcancel', endTouch);
+
+    // Mouse wheel support
     cylinderViewport.addEventListener('wheel', (e) => {
       e.preventDefault();
       autoRotate = false;
@@ -808,24 +849,27 @@ Portfolio:   https://ananthakrishnan17.github.io/portfolio/`
     });
   });
 
-  // Mobile toggle
+  // Mobile toggle & navigation drawer
   const mobileToggle = document.getElementById('mobile-toggle');
-
   const navMenu = document.querySelector('.nav-menu');
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       playCyberTone('click');
-      navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-      if (navMenu.style.display === 'flex') {
-        navMenu.style.flexDirection = 'column';
-        navMenu.style.position = 'absolute';
-        navMenu.style.top = '65px';
-        navMenu.style.left = '20px';
-        navMenu.style.right = '20px';
-        navMenu.style.background = 'rgba(10, 12, 18, 0.98)';
-        navMenu.style.padding = '24px';
-        navMenu.style.borderRadius = '20px';
-        navMenu.style.border = '1px solid var(--crimson-core)';
+      navMenu.classList.toggle('mobile-open');
+    });
+
+    // Close when clicking any nav menu link
+    navMenu.querySelectorAll('.menu-item').forEach(item => {
+      item.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-open');
+      });
+    });
+
+    // Close when tapping outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navMenu.classList.remove('mobile-open');
       }
     });
   }
