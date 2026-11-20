@@ -1,243 +1,1238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anantha Krishnan | ASP.NET & Flutter Developer</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#0a192f;
-  --accent:#64ffda;
-  --text:#ccd6f6;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;scroll-behavior:smooth;}
-a{text-decoration:none;color:var(--text);}
-
-/* Sidebar */
-.sidebar{
-  position:fixed;left:0;top:0;height:100vh;width:230px;
-  background:#112240;display:flex;flex-direction:column;
-  padding:30px 20px;z-index:200;transition:transform .3s;
-}
-.sidebar .logo{font-family:'Poppins',sans-serif;font-size:1.6rem;color:var(--accent);margin-bottom:40px;}
-.sidebar ul{list-style:none;display:flex;flex-direction:column;gap:25px;}
-.sidebar ul li a{font-size:1.1rem;}
-.sidebar ul li a:hover{color:var(--accent);}
-.hamburger{
-  position:fixed;left:15px;top:15px;z-index:300;
-  display:none;flex-direction:column;gap:5px;cursor:pointer;
-}
-.hamburger span{height:3px;width:25px;background:var(--accent);transition:.3s;}
-main{margin-left:230px;padding:0;}
-@media(max-width:900px){
-  .sidebar{transform:translateX(-230px);}
-  .sidebar.show{transform:translateX(0);}
-  .hamburger{display:flex;}
-  main{margin-left:0;}
-}
-
-/* Sections */
-section{max-width:1100px;margin:auto;padding:70px 20px;}
-h2.section-title{text-align:center;font-size:2rem;color:var(--accent);margin-bottom:40px;}
-header{
-  min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
-  text-align:center;padding:0 20px;
-}
-header h1{font-size:2.8rem;font-family:'Poppins',sans-serif;margin-bottom:10px;}
-header h2{font-size:1.3rem;margin-bottom:20px;color:var(--accent);}
-.btn-primary{padding:12px 25px;border:2px solid var(--accent);color:var(--accent);border-radius:5px;transition:0.3s;}
-.btn-primary:hover{background:var(--accent);color:var(--bg);}
-
-.about{display:flex;flex-wrap:wrap;align-items:center;gap:40px;justify-content:center;}
-.about img{width:260px;border-radius:50%;border:4px solid var(--accent);}
-.about p{line-height:1.6;font-size:1.1rem;}
-
-.item{background:#112240;border-radius:10px;padding:20px;margin-bottom:20px;}
-.item h3{color:var(--accent);margin-bottom:10px;}
-.item p{line-height:1.5;}
-
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-.skill{background:#112240;border-radius:10px;padding:20px;text-align:center;}
-.skill h4{color:var(--accent);margin-bottom:10px;}
-
-.contact form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;}
-.contact input,.contact textarea{
-  padding:10px;border-radius:5px;border:1px solid #233554;background:#0a192f;color:var(--text);
-}
-.contact button{background:var(--accent);color:var(--bg);border:none;padding:12px;font-weight:bold;
-  cursor:pointer;border-radius:5px;transition:0.3s;}
-.contact button:hover{opacity:0.9;}
-
-footer{text-align:center;padding:20px;background:#112240;}
-</style>
-</head>
-<body>
-
-<!-- Sidebar -->
-<div class="sidebar">
-  <div class="logo">AK</div>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="AnanthaKrishnan.pdf" target="_blank">Resume</a></li>
-  </ul>
-</div>
-<div class="hamburger"><span></span><span></span><span></span></div>
-
-<main>
-<!-- Hero -->
-<header id="home">
-  <h1>Hi, I'm <span style="color:var(--accent)">Anantha Krishnan</span></h1>
-  <h2>ASP.NET Full-Stack & Flutter Mobile Developer</h2>
-  <a href="#projects" class="btn-primary">View My Work</a>
-</header>
-<!-- Resume Section -->
-<section id="resume" data-aos="fade-up" style="display:none; padding-top:0;">
-  <iframe src="AnanthaKrishnan.pdf" width="100%" height="100vh" style="border:none;"></iframe>
-</section>
-
-<!-- About -->
-<section id="about" data-aos="fade-up">
-  <h2 class="section-title">Career Summary</h2>
-  <div class="about">
-    <img src="img/Krishna.jpeg" alt="Profile">
-    <p>
-      Full Stack Developer specialized in <strong>ASP.NET MVC / C#</strong> for scalable web apps  
-      and <strong>Flutter</strong> for enterprise mobile solutions.  
-      Proven track record of building secure APIs, SQL Server optimization,  
-      and delivering apps that significantly boost operational efficiency and customer sales.
-    </p>
-  </div>
-</section>
-
-<!-- Work Experience -->
-<section id="work" data-aos="fade-up">
-  <h2 class="section-title">Work Experience</h2>
-  <div class="item">
-    <h3>Software Developer – Kassapos Software Solutions (Sep 2024 – Present)</h3>
-    <p>
-      • Developed and deployed ERP modules using ASP.NET MVC & SQL Server, improving operational speed by 40%.<br>
-      • Optimized database access with Dapper, cutting query time by 35%.<br>
-      • Implemented AJAX-driven UI components for 30% faster user interaction.
-    </p>
-  </div>
-  <div class="item">
-    <h3>Software Developer Intern – Sathish System Pvt Ltd (Sep 2023 – May 2024)</h3>
-    <p>
-      • Built Exam Management System using Laravel & MySQL following MVC principles.<br>
-      • Designed responsive UI and interactive forms.
-    </p>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects" data-aos="fade-up">
-  <h2 class="section-title">Key Projects</h2>
-  <div class="item">
-    <h3>Logistics CRM & Mobile App</h3>
-    <p>
-      Designed and developed a <strong>Flutter-based mobile application</strong> backed by an <strong>ASP.NET MVC CRM system</strong>  
-      for a Malaysia-based logistics company.  
-      • Automated booking, shipment tracking, and customer notifications.<br>
-      • Achieved <strong>50% reduction</strong> in manual processing and boosted <strong>customer sales by 30%</strong> through faster quote-to-order cycle.<br>
-      • Integrated with third-party accounting, improving financial accuracy and monthly reconciliation speed.
-    </p>
-  </div>
-  <div class="item">
-    <h3>AI-Powered POS (In Progress)</h3>
-    <p>
-      Smart billing system combining ASP.NET backend and planned Flutter mobile interface with OpenAI integration for intelligent product suggestions.
-    </p>
-  </div>
-</section>
-
-<div class="skills">
-  <div class="skill"><h4>Backend</h4><p>ASP.NET MVC, C#, REST APIs, Dapper, SQL Server</p></div>
-  <div class="skill"><h4>Mobile</h4><p>Flutter, Dart, Firebase</p></div>
-  <div class="skill"><h4>Languages</h4>
-       <p>Tamil (Native), English (Professional), Japanese (Currently N4 Level)</p>
-  </div>
-  <div class="skill"><h4>Tools</h4><p>Git, Postman, Visual Studio, VS Code</p></div>
-</div>
-
-<!-- Education & Achievements -->
-<section id="education" data-aos="fade-up">
-  <h2 class="section-title">Education & Achievements</h2>
-
-  <div class="item">
-    <h3>BE – Computer Science & Engineering</h3>
-    <p>
-      Anna University Regional Campus, Tirunelveli – 2019-2023 | GPA 7.93/10 <br>
-      <strong>Mini Project:</strong> Hand Gesture Recognition using Machine Learning. <br>
-      <strong>Awards:</strong> Won <strong>1st Prize</strong> at University Expo for the mini project. <br>
-      <strong>Leadership:</strong> Organiser for Cultural Events during college fests.
-    </p>
-  </div>
-  <div class="item">
-    <h3>Japanese Language – Hayakawa Japanese School</h3>
-    <p>
-      Completed Basic Course with certification and <strong>currently pursuing N4 level</strong>.  
-      Skills: Conversational Japanese, Reading & Writing Hiragana/Katakana, Basic Kanji.
-    </p>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" data-aos="fade-up">
-  <h2 class="section-title">Contact</h2>
-  <div class="contact">
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<footer>&copy; 2025 Anantha Krishnan. All Rights Reserved.</footer>
-</main>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({duration:1000});
-const ham=document.querySelector('.hamburger');
-const sidebar=document.querySelector('.sidebar');
-ham.addEventListener('click',()=>sidebar.classList.toggle('show'));
-const url = 'AnanthaKrishnan.pdf'; // PDF path
-const canvas = document.getElementById('pdfViewer');
-const ctx = canvas.getContext('2d');
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js';
-
-pdfjsLib.getDocument(url).promise.then(pdf => {
-    pdf.getPage(1).then(page => {
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-
-        page.render({
-            canvasContext: ctx,
-            viewport: viewport
-        });
-    });
-});
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anantha Krishnan • Full-Stack .NET Developer &amp; Enterprise Logistics Architect</title>
   
-</script>
+  <!-- Modern Sci-Fi Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;800&family=Space+Grotesk:wght@400;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="cockpit-body">
+
+  <!-- ==================== 1. PRELOADER & HORIZONTAL CINEMATIC SPLIT WIPE ==================== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-grid"></div>
+    
+    <!-- Top Half Blast Door & Top Split Text -->
+    <div class="preloader-door door-top" id="door-top">
+      <div class="door-text-half top-text">
+        <span class="p-white">ANANTHA </span>
+        <span class="p-red">KRISHNAN</span>
+        <span class="p-white"> // FULL-STACK</span>
+      </div>
+    </div>
+
+    <!-- Bottom Half Blast Door & Bottom Split Text -->
+    <div class="preloader-door door-bottom" id="door-bottom">
+      <div class="door-text-half bottom-text">
+        <span class="p-white">.NET &amp; </span>
+        <span class="p-red">FLUTTER</span>
+        <span class="p-white"> ARCHITECT</span>
+      </div>
+    </div>
+    
+    <!-- Center Horizontal Laser Slit Beam -->
+    <div class="preloader-center-slit" id="preloader-slit"></div>
+
+    <div class="preloader-container" id="preloader-content">
+      <div class="preloader-counter-box">
+        <span id="load-num" class="giant-loader-num">0</span>
+      </div>
+      <div class="preloader-center-orb">
+        <div class="orb-ring"></div>
+        <div class="orb-dot"></div>
+      </div>
+      <div class="preloader-status-meta">
+        <span>// SYSTEM_CORE: ONLINE</span>
+        <span class="blink-tag">STANDBY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Cyber Cursor -->
+  <div class="cyber-cursor-dot" id="cursor-dot"></div>
+  <div class="cyber-cursor-ring" id="cursor-ring"></div>
+
+  <!-- Ambient Volumetric Nebula & Ember Canvas -->
+  <canvas id="nebula-canvas"></canvas>
+
+  <!-- Audio SFX Floating HUD -->
+  <div class="sfx-hud">
+    <button id="sfx-btn" class="hud-pill" title="Toggle Futuristic SFX">
+      <i data-lucide="volume-2" id="sfx-icon"></i>
+      <span>SFX: <strong id="sfx-status">ON</strong></span>
+    </button>
+  </div>
+
+  <!-- ==================== MAIN COCKPIT CONTAINER ==================== -->
+  <div class="cockpit-chassis">
+    
+    <!-- Top Cockpit Floating Header / Navbar -->
+    <header class="cockpit-navbar">
+      <div class="nav-chassis glass-pill">
+        <a href="#hero" class="brand-tag">
+          <span class="brand-red">K</span>RISHNAN<span class="brand-dot">.</span>
+        </a>
+
+        <nav class="nav-menu">
+          <a href="#projects" class="menu-item">PROJECTS</a>
+          <a href="#simulator" class="menu-item">LIVE SIMULATOR</a>
+          <a href="#experience" class="menu-item">EXPERIENCE</a>
+          <a href="#architecture" class="menu-item">ARCHITECTURE</a>
+          <a href="#terminal" class="menu-item">CLI CONSOLE</a>
+          <a href="#about" class="menu-item">ABOUT</a>
+          <a href="#credentials" class="menu-item">EDUCATION</a>
+          <a href="#skills" class="menu-item">SKILLS</a>
+          <a href="#contact" class="menu-item">CONTACT</a>
+        </nav>
+
+        <a href="Ananthakrishnan_Resume.pdf" download="Ananthakrishnan_Resume.pdf" class="btn-download-resume" title="Download Official Resume PDF">
+          <i data-lucide="file-down"></i> <span>RESUME</span>
+        </a>
+
+        <a href="#contact" class="btn-talk-pill">
+          <span>LET'S TALK</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-toggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <main class="cockpit-viewport">
+      <!-- ==================== 2. HERO SECTION ==================== -->
+      <section id="hero" class="cockpit-hero">
+        
+        <!-- Outer Sci-Fi Beveled Cockpit Housing -->
+        <div class="cockpit-bezel-frame">
+          
+          <!-- Angled Structural Metal Struts (Connecting Navbar & Panels) -->
+          <svg class="cockpit-struts-svg" viewBox="0 0 1200 600" fill="none" preserveAspectRatio="none">
+            <path d="M 450 40 L 400 120 L 80 120" stroke="rgba(255, 30, 66, 0.4)" stroke-width="2" stroke-dasharray="6 4" />
+            <path d="M 680 40 L 740 110 L 1120 110" stroke="rgba(255, 30, 66, 0.4)" stroke-width="2" />
+            <path d="M 460 380 L 1150 160" stroke="rgba(255, 30, 66, 0.65)" stroke-width="2.5" />
+            <path d="M 460 380 L 1150 160" stroke="#ffffff" stroke-width="1" opacity="0.8" />
+          </svg>
+
+          <div class="cockpit-grid">
+            
+            <!-- Left HUD Info Card -->
+            <div class="hero-hud-card glass-hud">
+              <div class="hud-top-meta">
+                <span class="radar-dot"></span>
+                <span class="hud-role-tag">FULL-STACK .NET DEVELOPER @ KASSAPOS</span>
+              </div>
+
+              <!-- Japanese Sci-Fi Telemetry accent honoring JLPT N5 -->
+              <div style="font-family: var(--font-hud); font-size: 0.76rem; color: var(--crimson-core); letter-spacing: 2px; margin-bottom: 6px;">
+                // アナンタ・クリシュナン • フルスタック エンジニア
+              </div>
+
+              <h1 class="hero-name-giant">
+                <span class="first-name">ANANTHA</span>
+                <span class="last-name">KRISHNAN</span>
+              </h1>
+              
+              <h2 class="hero-title-sub">
+                C# / ASP.NET MVC <span class="accent-slash">•</span> FLUTTER <span class="accent-slash">•</span> SQL SERVER
+              </h2>
+
+              <p class="hero-tagline-text">
+                Engineering high-throughput enterprise logistics platforms, automated RTI calculation engines, and scalable mobile systems at Kassapos Software Solutions since September 2023.
+              </p>
+
+              <div class="hero-btn-group">
+                <a href="#simulator" class="btn-glow-crimson">
+                  <i data-lucide="play-circle"></i> <span>TEST LIVE SIMULATOR</span>
+                </a>
+                <a href="#terminal" class="btn-glass-pill">
+                  <i data-lucide="terminal"></i> <span>RUN CLI CONSOLE</span>
+                </a>
+                <a href="Ananthakrishnan_Resume.pdf" download="Ananthakrishnan_Resume.pdf" class="btn-glass-pill">
+                  <i data-lucide="file-text"></i> <span>RESUME (PDF)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Hologram Portrait Stage with Multi-Shard Split Assembly -->
+            <div class="hero-portrait-stage">
+              <!-- Volumetric Red Plasma Nebula Aura Behind Person -->
+              <div class="plasma-aurora"></div>
+
+              <!-- Replay Split Assembly Action Button -->
+              <button id="btn-replay-split" class="btn-replay-pill" title="Replay Image Split & Convergence">
+                <i data-lucide="sparkles"></i> <span>REPLAY SPLIT ASSEMBLY</span>
+              </button>
+
+              <!-- Sci-Fi Chamfered Frame Container with Split Shards (NO CROSSING LASER LINE ACROSS FACE!) -->
+              <div class="portrait-cockpit-frame" id="portrait-frame">
+                
+                <!-- Target Reticles -->
+                <div class="hud-target-reticle tl">+</div>
+                <div class="hud-target-reticle tr">+</div>
+                <div class="hud-target-reticle bl">+</div>
+                <div class="hud-target-reticle br">+</div>
+
+                <!-- 5 MULTI-SHARD HORIZONTAL SPLIT SLICES (Clean, sharp, no line on face!) -->
+                <div class="split-shards-assembly" id="split-assembly">
+                  
+                  <!-- Shard 1: Top Hair -->
+                  <div class="shard shard-1">
+                    <img src="krishna_hero_final.png" alt="Anantha Krishnan" class="shard-img">
+                  </div>
+
+                  <!-- Shard 2: Eyes & Forehead -->
+                  <div class="shard shard-2">
+                    <img src="krishna_hero_final.png" alt="Anantha Krishnan" class="shard-img">
+                  </div>
+
+                  <!-- Shard 3: Nose & Smile -->
+                  <div class="shard shard-3">
+                    <img src="krishna_hero_final.png" alt="Anantha Krishnan" class="shard-img">
+                  </div>
+
+                  <!-- Shard 4: Chin & Collar -->
+                  <div class="shard shard-4">
+                    <img src="krishna_hero_final.png" alt="Anantha Krishnan" class="shard-img">
+                  </div>
+
+                  <!-- Shard 5: Suit & Chest -->
+                  <div class="shard shard-5">
+                    <img src="krishna_hero_final.png" alt="Anantha Krishnan" class="shard-img">
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== 3. ODOMETER ROLLING STATS ==================== -->
+        <div class="stats-slot-bar glass-hud">
+          <div class="slot-column">
+            <div class="slot-odometer">
+              <span class="roll-number" data-final="2">2</span><span class="plus-mark">.5+</span>
+            </div>
+            <span class="slot-label">YEARS @ KASSAPOS SOFTWARE</span>
+          </div>
+
+          <div class="slot-sep"></div>
+
+          <div class="slot-column">
+            <div class="slot-odometer">
+              <span class="roll-number" data-final="14">14</span><span class="plus-mark">+</span>
+            </div>
+            <span class="slot-label">ENTERPRISE MODULES BUILT</span>
+          </div>
+
+          <div class="slot-sep"></div>
+
+          <div class="slot-column">
+            <div class="slot-odometer">
+              <span class="roll-number" data-final="99">99</span><span class="plus-mark">.8%</span>
+            </div>
+            <span class="slot-label">SYSTEM AVAILABILITY UPTIME</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==================== 4. 3D ROTATING CYLINDER PROJECTS CAROUSEL ==================== -->
+      <section id="projects" class="section projects-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">FEATURED WORKS</span>
+          <h2 class="main-header-glitch">PROJECTS<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <!-- Mode Toggle: 3D Cylinder / Detailed Grid -->
+        <div class="carousel-controls">
+          <button id="btn-3d-mode" class="ctrl-tab active"><i data-lucide="rotate-3d"></i> 3D CYLINDER</button>
+          <button id="btn-grid-mode" class="ctrl-tab"><i data-lucide="grid"></i> GRID VIEW</button>
+          <div class="carousel-drag-hint">
+            <i data-lucide="move-horizontal"></i> DRAG / WHEEL TO ROTATE IN 3D
+          </div>
+        </div>
+
+        <!-- 3D CYLINDER VIEWPORT -->
+        <div id="cylinder-viewport" class="cylinder-3d-scene">
+          <div id="cylinder-ring" class="cylinder-ring">
+            
+            <!-- Card 01 -->
+            <div class="cylinder-card glass-slab" data-index="0">
+              <div class="slab-number">01</div>
+              <div class="slab-badge">ENTERPRISE LOGISTICS</div>
+              <div class="slab-icon"><i data-lucide="truck"></i></div>
+              <h3 class="slab-title">Logistics ERP Suite</h3>
+              <p class="slab-desc">Kassapos • End-to-end CRM, Sales Orders, Gate Pass, Invoicing & Delivery</p>
+              <div class="slab-tech">
+                <span>C#</span><span>ASP.NET MVC</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <!-- Card 02 -->
+            <div class="cylinder-card glass-slab" data-index="1">
+              <div class="slab-number">02</div>
+              <div class="slab-badge">AUTOMATION ENGINE</div>
+              <div class="slab-icon"><i data-lucide="calculator"></i></div>
+              <h3 class="slab-title">Driver RTI Engine</h3>
+              <p class="slab-desc">Automated Run-Time Incentives & dynamic payroll calculation slashing manual effort by 80%</p>
+              <div class="slab-tech">
+                <span>C#</span><span>Stored Procedures</span><span>LINQ</span>
+              </div>
+            </div>
+
+            <!-- Card 03 -->
+            <div class="cylinder-card glass-slab" data-index="2">
+              <div class="slab-number">03</div>
+              <div class="slab-badge">OPERATIONS HUB</div>
+              <div class="slab-icon"><i data-lucide="layout-dashboard"></i></div>
+              <h3 class="slab-title">Role-Based Dashboards</h3>
+              <p class="slab-desc">Tailored operational cockpits for Accounts, Transport Managers & Dispatch staff</p>
+              <div class="slab-tech">
+                <span>ASP.NET MVC</span><span>Chart.js</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <!-- Card 04 -->
+            <div class="cylinder-card glass-slab" data-index="3">
+              <div class="slab-number">04</div>
+              <div class="slab-badge">MOBILE APP</div>
+              <div class="slab-icon"><i data-lucide="smartphone"></i></div>
+              <h3 class="slab-title">Logistics Field App</h3>
+              <p class="slab-desc">Driver mobile app for live checkpoint updates, digital POD & dispatch telemetry</p>
+              <div class="slab-tech">
+                <span>Flutter</span><span>Dart</span><span>REST APIs</span>
+              </div>
+            </div>
+
+            <!-- Card 05 (REPLACED INTERN: Kassapos Warehouse Gate Pass Module) -->
+            <div class="cylinder-card glass-slab" data-index="4">
+              <div class="slab-number">05</div>
+              <div class="slab-badge">LOGISTICS GATEWAY</div>
+              <div class="slab-icon"><i data-lucide="shield-check"></i></div>
+              <h3 class="slab-title">Gate Pass & Movement</h3>
+              <p class="slab-desc">High-security vehicle dispatch gate pass generator with multi-level approval & tare weight audit</p>
+              <div class="slab-tech">
+                <span>C#</span><span>ASP.NET MVC</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <!-- Card 06 -->
+            <div class="cylinder-card glass-slab" data-index="5">
+              <div class="slab-number">06</div>
+              <div class="slab-badge">WAREHOUSE TECH</div>
+              <div class="slab-icon"><i data-lucide="barcode"></i></div>
+              <h3 class="slab-title">Barcode Stock Tracker</h3>
+              <p class="slab-desc">High-speed material scanner & inventory ledger with instant serial verification</p>
+              <div class="slab-tech">
+                <span>Flutter</span><span>C#</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <!-- Card 07 -->
+            <div class="cylinder-card glass-slab" data-index="6">
+              <div class="slab-number">07</div>
+              <div class="slab-badge">FINANCIAL ENGINE</div>
+              <div class="slab-icon"><i data-lucide="receipt"></i></div>
+              <h3 class="slab-title">Automated Tax Billing</h3>
+              <p class="slab-desc">GST-compliant invoice engine supporting multi-tier logistics freight calculations</p>
+              <div class="slab-tech">
+                <span>C#</span><span>iTextSharp</span><span>SQL Server</span>
+              </div>
+            </div>
+
+            <!-- Card 08 -->
+            <div class="cylinder-card glass-slab" data-index="7">
+              <div class="slab-number">08</div>
+              <div class="slab-badge">SCI-FI 3D WEB</div>
+              <div class="slab-icon"><i data-lucide="box"></i></div>
+              <h3 class="slab-title">3D Cockpit Portfolio</h3>
+              <p class="slab-desc">Next-gen cybernetic portfolio with multi-shard split convergence & Web Audio SFX</p>
+              <div class="slab-tech">
+                <span>JavaScript</span><span>Canvas 2D</span><span>CSS 3D</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DETAILED PROJECTS GRID -->
+        <div id="projects-grid-view" class="projects-detailed-grid">
+          
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Kassapos Logistics</span>
+              <span class="proj-idx">01</span>
+            </div>
+            <h3 class="proj-title">Enterprise Logistics Suite</h3>
+            <p class="proj-summary">Comprehensive enterprise logistics ERP managing CRM pipelines, Sales Orders, Material Gate Passes, Delivery Notes, and Invoicing.</p>
+            <div class="proj-mini-visual terminal-view">
+              <code>> order.dispatch(id=KP-9281)<br>> status: OUT_FOR_DELIVERY [OK]</code>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Automation</span>
+              <span class="proj-idx">02</span>
+            </div>
+            <h3 class="proj-title">Driver RTI Payroll Engine</h3>
+            <p class="proj-summary">Dynamic calculation engine determining run-time incentives, trip bonuses, and mileage allowances using advanced SQL stored procedures.</p>
+            <div class="proj-mini-visual chart-view">
+              <div class="bar-chart-preview">
+                <span style="height: 50%"></span>
+                <span style="height: 85%"></span>
+                <span style="height: 65%"></span>
+                <span style="height: 98%"></span>
+                <span style="height: 75%"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Role Cockpit</span>
+              <span class="proj-idx">03</span>
+            </div>
+            <h3 class="proj-title">Role-Based Dashboards</h3>
+            <p class="proj-summary">Multi-tiered operational dashboards custom-built for Transport, Finance, and Customer Support departments with strict RBAC access.</p>
+            <div class="proj-mini-visual keypad-view">
+              <div class="grid-pads">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Mobile App</span>
+              <span class="proj-idx">04</span>
+            </div>
+            <h3 class="proj-title">Logistics Field App</h3>
+            <p class="proj-summary">Cross-platform Flutter application providing drivers with instant delivery route schedules, barcode scanning, and digital signatures.</p>
+            <div class="proj-mini-visual wire-view">
+              <div class="wire-globe-circle"></div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Warehouse Security</span>
+              <span class="proj-idx">05</span>
+            </div>
+            <h3 class="proj-title">Gate Pass & Movement Control</h3>
+            <p class="proj-summary">Security verification engine verifying material dispatch authorization, vehicle weight check, and automated gate pass approval in SQL Server.</p>
+            <div class="proj-mini-visual chat-bubble-view">
+              <div class="bubble b1"></div>
+              <div class="bubble b2"></div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Warehouse Tech</span>
+              <span class="proj-idx">06</span>
+            </div>
+            <h3 class="proj-title">Barcode Stock Tracker</h3>
+            <p class="proj-summary">Real-time inventory verification system enabling warehouse staff to scan barcodes and synchronize stock movements with SQL Server.</p>
+            <div class="proj-mini-visual mesh-view">
+              <div class="infinity-nodes"></div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Financial Engine</span>
+              <span class="proj-idx">07</span>
+            </div>
+            <h3 class="proj-title">Automated Tax Billing</h3>
+            <p class="proj-summary">High-throughput billing service supporting multi-state GST rules, automated ledger reconciliation, and batch PDF generation.</p>
+            <div class="proj-mini-visual sphere-view">
+              <div class="cube-wire-3d"></div>
+            </div>
+          </div>
+
+          <div class="grid-proj-card glass-hud">
+            <div class="proj-header">
+              <span class="proj-tag">Interactive Portfolio</span>
+              <span class="proj-idx">08</span>
+            </div>
+            <h3 class="proj-title">3D Cyberpunk Showcase</h3>
+            <p class="proj-summary">Personal developer portfolio featuring blast-door split transitions, multi-shard image convergence, and a 3D cylindrical project rotor.</p>
+            <div class="proj-mini-visual radar-view">
+              <div class="radar-circle"></div>
+              <div class="radar-sweep"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ==================== 5. ENTERPRISE OPERATIONS SIMULATOR ==================== -->
+      <section id="simulator" class="section simulator-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">INTERACTIVE DEMO</span>
+          <h2 class="main-header-glitch">LIVE OPERATIONS SIMULATOR<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="sim-console-chassis glass-hud">
+          
+          <div class="sim-header-bar">
+            <div class="sim-tabs-nav">
+              <button class="sim-tab-btn active" data-tab="panel-rti">
+                <i data-lucide="calculator"></i> <span>RTI SALARY CALCULATOR</span>
+              </button>
+              <button class="sim-tab-btn" data-tab="panel-role">
+                <i data-lucide="layout-dashboard"></i> <span>ROLE DASHBOARD HUB</span>
+              </button>
+              <button class="sim-tab-btn" data-tab="panel-scanner">
+                <i data-lucide="scan"></i> <span>BARCODE STOCK SCANNER</span>
+              </button>
+            </div>
+
+            <div class="sim-status-live">
+              <span class="green-live-dot"></span>
+              <span>KASSAPOS ENGINE // LIVE EMULATION</span>
+            </div>
+          </div>
+
+          <!-- TAB 1: RTI CALCULATOR -->
+          <div id="panel-rti" class="sim-panel active">
+            <div class="sim-rti-grid">
+              
+              <div class="sim-controls-card">
+                <div class="sim-field-group">
+                  <div class="sim-field-header">
+                    <span class="sim-field-label">TOTAL ROUTE DISTANCE</span>
+                    <span id="txt-dist-val" class="sim-field-val">340 KM</span>
+                  </div>
+                  <input type="range" id="slider-distance" class="sim-range-slider" min="50" max="1200" value="340" step="10">
+                </div>
+
+                <div class="sim-field-group">
+                  <div class="sim-field-header">
+                    <span class="sim-field-label">DELIVERY ON-TIME TARGET RATE</span>
+                    <span id="txt-target-val" class="sim-field-val">96 %</span>
+                  </div>
+                  <input type="range" id="slider-target" class="sim-range-slider" min="60" max="100" value="96" step="1">
+                </div>
+
+                <div class="sim-toggle-row">
+                  <span class="sim-toggle-label">
+                    <i data-lucide="moon"></i> NIGHT RUN DISPATCH ALLOWANCE
+                  </span>
+                  <label class="sim-switch">
+                    <input type="checkbox" id="check-night" checked>
+                    <span class="sim-switch-slider"></span>
+                  </label>
+                </div>
+
+                <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-dark); line-height: 1.6;">
+                  // ALGORITHM: Calculates driver run-time incentives (RTI) based on mileage checkpoints, fuel compliance, and dynamic payroll stored procedures.
+                </div>
+              </div>
+
+              <!-- Live Hologram Receipt -->
+              <div class="sim-receipt-box">
+                <div class="receipt-header">
+                  <div class="receipt-title">DRIVER PAYROLL STATEMENT</div>
+                  <div class="receipt-sub">// AUTOMATED RTI SETTLEMENT ENGINE</div>
+                </div>
+
+                <div class="receipt-items-list">
+                  <div class="receipt-line">
+                    <span>Base Freight Allowance:</span>
+                    <strong id="rc-base-fare">₹2,890</strong>
+                  </div>
+                  <div class="receipt-line highlight">
+                    <span>Performance RTI Incentive:</span>
+                    <strong id="rc-rti-incentive" style="color: #10b981;">+ ₹610</strong>
+                  </div>
+                  <div class="receipt-line">
+                    <span>Fuel Mileage Efficiency Bonus:</span>
+                    <strong id="rc-fuel-bonus">+ ₹450</strong>
+                  </div>
+                  <div class="receipt-line">
+                    <span>Night Shift Dispatch Allowance:</span>
+                    <strong id="rc-night-bonus">+ ₹500</strong>
+                  </div>
+                </div>
+
+                <div class="receipt-total-bar">
+                  <span class="receipt-total-label">GROSS DISBURSED:</span>
+                  <span id="rc-gross-total" class="receipt-total-val">₹4,450</span>
+                </div>
+
+                <div class="receipt-footer-meta">
+                  <span>STATUS: READY FOR DIRECT BANK NEFT / UPI DISPATCH</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB 2: ROLE DASHBOARDS -->
+          <div id="panel-role" class="sim-panel">
+            <div class="role-cockpit-stage">
+              <div class="role-sub-tabs">
+                <button class="role-sub-tab active" data-role="transport"><i data-lucide="truck"></i> TRANSPORT</button>
+                <button class="role-sub-tab" data-role="accounts"><i data-lucide="receipt"></i> ACCOUNTS &amp; FINANCE</button>
+                <button class="role-sub-tab" data-role="maintenance"><i data-lucide="wrench"></i> FLEET MAINTENANCE</button>
+                <button class="role-sub-tab" data-role="customer"><i data-lucide="headphones"></i> CUSTOMER SERVICE</button>
+              </div>
+
+              <div id="role-kpi-grid" class="role-kpi-grid">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: BARCODE SCANNER -->
+          <div id="panel-scanner" class="sim-panel">
+            <div class="scanner-sim-grid">
+              
+              <div class="scanner-viewport-box">
+                <div class="scanner-laser-line"></div>
+                
+                <div class="scanner-visual-barcode">
+                  <span class="thick"></span><span class="thin"></span><span></span><span class="thick"></span>
+                  <span class="thin"></span><span></span><span class="thick"></span><span></span><span class="thin"></span>
+                  <span class="thick"></span><span></span><span class="thin"></span><span class="thick"></span><span></span>
+                </div>
+
+                <button id="btn-trigger-scan" class="btn-trigger-scan">
+                  <i data-lucide="scan"></i> <span>TRIGGER BARCODE SCAN</span>
+                </button>
+              </div>
+
+              <div class="scanner-result-dossier">
+                <div style="font-family: var(--font-hud); font-size: 0.85rem; color: var(--crimson-core); letter-spacing: 1.5px; margin-bottom: 8px;">
+                  // WAREHOUSE STOCK SCAN RESULT
+                </div>
+
+                <div class="scan-result-row">
+                  <span class="scan-result-label">SCANNED SKU CODE:</span>
+                  <span id="scan-sku" class="scan-result-data" style="color: var(--crimson-core);">KP-LOG-8838-TRK</span>
+                </div>
+
+                <div class="scan-result-row">
+                  <span class="scan-result-label">COMPONENT NAME:</span>
+                  <span id="scan-item" class="scan-result-data">Hydraulic Brake Rotor Kit</span>
+                </div>
+
+                <div class="scan-result-row">
+                  <span class="scan-result-label">WAREHOUSE LOCATION:</span>
+                  <span id="scan-location" class="scan-result-data">Bay 4-C, Ambattur Hub</span>
+                </div>
+
+                <div class="scan-result-row">
+                  <span class="scan-result-label">SQL SERVER SYNC:</span>
+                  <span id="scan-status" class="scan-result-data success">VERIFIED &amp; SYNCED (0.012s)</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 6. WORK EXPERIENCE TIMELINE (KASSAPOS SEP 2023 - PRESENT) ==================== -->
+      <section id="experience" class="section experience-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">CAREER TIMELINE</span>
+          <h2 class="main-header-glitch">WORK EXPERIENCE<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="timeline-circuit-container">
+          
+          <!-- Kassapos Software Solutions (09/2023 - Present) -->
+          <div class="exp-circuit-card glass-hud">
+            <div class="exp-node-pin"></div>
+            
+            <div class="exp-top-row">
+              <h3 class="exp-role-title">Software Developer</h3>
+              <span class="exp-duration-badge">09/2023 – PRESENT</span>
+            </div>
+
+            <div class="exp-company-sub">
+              KASSAPOS SOFTWARE SOLUTIONS <span class="loc">// CHENNAI, INDIA</span>
+            </div>
+
+            <div class="exp-bullets-list">
+              <div class="exp-bullet-item">
+                <i data-lucide="chevron-right"></i>
+                <span>Engineering enterprise-scale logistics, supply chain, and fleet automation systems using <strong>ASP.NET MVC, C#, MS SQL Server, jQWidgets, and Flutter</strong>.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <i data-lucide="chevron-right"></i>
+                <span>Designed and delivered core operational modules: <strong>CRM, Sales Order, Route Planning, Driver RTI, Invoicing, Payable/Receivable, and Material Gate Pass</strong>.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <i data-lucide="chevron-right"></i>
+                <span>Built automated computation engines: <strong>Driver Run-Time Incentives (RTI) salary calculation</strong>, automated WhatsApp &amp; Email milestone alerts, and barcode-based inventory reconciliation.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <i data-lucide="chevron-right"></i>
+                <span>Architected role-based operational cockpits for <strong>Accounts, Transportation, Maintenance, and Customer Service</strong> teams with sub-second SQL stored procedures.</span>
+              </div>
+              <div class="exp-bullet-item">
+                <i data-lucide="chevron-right"></i>
+                <span>Developed cross-platform mobile apps in <strong>Flutter</strong> for field delivery drivers with offline sync and proof-of-delivery (POD) digital signatures.</span>
+              </div>
+            </div>
+
+            <div class="exp-tech-tags">
+              <span class="exp-tag">ASP.NET MVC</span>
+              <span class="exp-tag">C#</span>
+              <span class="exp-tag">MS SQL Server</span>
+              <span class="exp-tag">Flutter</span>
+              <span class="exp-tag">jQWidgets</span>
+              <span class="exp-tag">REST APIs</span>
+              <span class="exp-tag">WhatsApp Business API</span>
+              <span class="exp-tag">Crystal Reports</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== NEW MASS FEATURE 1: ENTERPRISE ARCHITECTURE TOPOLOGY BLUEPRINT ==================== -->
+      <section id="architecture" class="section architecture-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">SYSTEM DESIGN</span>
+          <h2 class="main-header-glitch">ENTERPRISE TOPOLOGY BLUEPRINT<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="arch-topology-wrapper glass-hud">
+          <div class="arch-intro-bar">
+            <div>
+              <span class="arch-badge">ENTERPRISE SUPPLY CHAIN TOPOLOGY</span>
+              <h3 class="arch-main-title">End-to-End Logistics Architecture</h3>
+              <p class="arch-sub-text">Designed and implemented by Anantha Krishnan at Kassapos Software Solutions (Sep 2023 – Present).</p>
+            </div>
+            <div class="arch-status-pill">
+              <span class="green-live-dot"></span> LIVE IN PRODUCTION
+            </div>
+          </div>
+
+          <!-- 4-Tier Interactive Architecture Canvas / Cards -->
+          <div class="arch-layers-grid">
+            
+            <!-- Tier 1: Client & Field Edge -->
+            <div class="arch-tier-card glass-hud" data-tier="1">
+              <div class="tier-top-meta">
+                <span class="tier-tag">TIER 01 // CLIENT &amp; FIELD EDGE</span>
+                <div class="tier-icon cyan"><i data-lucide="smartphone"></i></div>
+              </div>
+              <h4 class="tier-name">Field Mobile &amp; Web Portals</h4>
+              <ul class="tier-specs">
+                <li><strong>Flutter Android App:</strong> Driver real-time route checkpoints, GPS telemetry, digital POD signatures.</li>
+                <li><strong>Enterprise Web Portal:</strong> ASP.NET MVC &amp; jQWidgets for dispatch controllers and accountants.</li>
+                <li><strong>Industrial Barcode Hardware:</strong> Handheld warehouse inventory stock auditing.</li>
+              </ul>
+              <div class="tier-tech-pills">
+                <span>Flutter</span><span>jQWidgets</span><span>Bootstrap</span><span>REST</span>
+              </div>
+            </div>
+
+            <!-- Tier 2: API Gateway & Security -->
+            <div class="arch-tier-card glass-hud" data-tier="2">
+              <div class="tier-top-meta">
+                <span class="tier-tag">TIER 02 // API &amp; MIDDLEWARE</span>
+                <div class="tier-icon yellow"><i data-lucide="shield-check"></i></div>
+              </div>
+              <h4 class="tier-name">REST APIs &amp; Security Gateway</h4>
+              <ul class="tier-specs">
+                <li><strong>Role-Based Access Control (RBAC):</strong> Granular permissions for Transport, Accounts, and Service roles.</li>
+                <li><strong>Data Serialization:</strong> High-throughput JSON payload contracts with audit trail logging.</li>
+                <li><strong>Omnichannel Dispatch:</strong> WhatsApp Business API &amp; SMTP notification service.</li>
+              </ul>
+              <div class="tier-tech-pills">
+                <span>C# Web API</span><span>RBAC</span><span>WhatsApp API</span><span>JSON</span>
+              </div>
+            </div>
+
+            <!-- Tier 3: Business Logic Core -->
+            <div class="arch-tier-card glass-hud" data-tier="3">
+              <div class="tier-top-meta">
+                <span class="tier-tag">TIER 03 // ENTERPRISE CORE</span>
+                <div class="tier-icon red"><i data-lucide="cpu"></i></div>
+              </div>
+              <h4 class="tier-name">C# / .NET Business Engines</h4>
+              <ul class="tier-specs">
+                <li><strong>Driver RTI Calculation Engine:</strong> Dynamic run-time incentives, mileage, and payroll processing.</li>
+                <li><strong>Logistics State Machine:</strong> CRM -> Sales Order -> Route Planning -> Invoicing -> Settlement.</li>
+                <li><strong>GST Billing &amp; Invoicing:</strong> Multi-tier freight tax computation and e-invoice generation.</li>
+              </ul>
+              <div class="tier-tech-pills">
+                <span>C#</span><span>ASP.NET MVC</span><span>LINQ</span><span>State Engines</span>
+              </div>
+            </div>
+
+            <!-- Tier 4: Data Engine -->
+            <div class="arch-tier-card glass-hud" data-tier="4">
+              <div class="tier-top-meta">
+                <span class="tier-tag">TIER 04 // DATA INFRASTRUCTURE</span>
+                <div class="tier-icon purple"><i data-lucide="database"></i></div>
+              </div>
+              <h4 class="tier-name">MS SQL Server Data Engine</h4>
+              <ul class="tier-specs">
+                <li><strong>Stored Procedures:</strong> Indexed, sub-millisecond execution plans for real-time reporting.</li>
+                <li><strong>ACID Transactional Ledger:</strong> Zero-data-loss integrity for payments, gate passes &amp; orders.</li>
+                <li><strong>Batch Reporting:</strong> Nightly ledger reconciliation and Crystal Reports PDF exports.</li>
+              </ul>
+              <div class="tier-tech-pills">
+                <span>SQL Server</span><span>Stored Procs</span><span>T-SQL</span><span>Crystal Reports</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== NEW MASS FEATURE 2: CYBER DEVELOPER EXECUTION CLI ==================== -->
+      <section id="terminal" class="section terminal-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">DEVELOPER CONSOLE</span>
+          <h2 class="main-header-glitch">LIVE ENTERPRISE CLI<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="cyber-terminal-chassis glass-hud">
+          <div class="term-title-bar">
+            <div class="term-window-dots">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+            </div>
+            <div class="term-header-title">
+              <i data-lucide="terminal"></i> ananthakrishnan@kassapos-core-v2.6 ~
+            </div>
+            <div class="term-status-tag">SYSTEM: READY</div>
+          </div>
+
+          <!-- Quick Run Command Pills -->
+          <div class="term-quick-bar">
+            <span class="quick-label">QUICK COMMANDS:</span>
+            <button class="btn-quick-cmd" data-cmd="sp_rti">
+              <i data-lucide="calculator"></i> RTI Calculation SP
+            </button>
+            <button class="btn-quick-cmd" data-cmd="fleet">
+              <i data-lucide="truck"></i> Fleet Telemetry
+            </button>
+            <button class="btn-quick-cmd" data-cmd="architecture">
+              <i data-lucide="cpu"></i> System Topology
+            </button>
+            <button class="btn-quick-cmd" data-cmd="whoami">
+              <i data-lucide="user"></i> whoami
+            </button>
+            <button class="btn-quick-cmd" data-cmd="skills">
+              <i data-lucide="code-2"></i> Tech Stack
+            </button>
+            <button class="btn-quick-cmd" data-cmd="clear">
+              <i data-lucide="trash-2"></i> clear
+            </button>
+          </div>
+
+          <!-- Live Streaming Terminal Logs -->
+          <div class="term-body" id="term-body">
+            <div class="term-line welcome">
+              <span class="prompt-host">[krishnan@kassapos-core]$</span>
+              <span class="term-text">// KASSAPOS ENTERPRISE CLI INITIALIZED [v2.6.4-LTS]</span>
+            </div>
+            <div class="term-line">
+              <span class="prompt-host">[krishnan@kassapos-core]$</span>
+              <span class="term-text">Type any command or click a quick action pill above. Available commands: <span class="term-highlight">sp_rti</span>, <span class="term-highlight">fleet</span>, <span class="term-highlight">architecture</span>, <span class="term-highlight">whoami</span>, <span class="term-highlight">skills</span>, <span class="term-highlight">contact</span>, <span class="term-highlight">clear</span>.</span>
+            </div>
+          </div>
+
+          <!-- Interactive Terminal Command Input -->
+          <form id="term-form" class="term-input-row">
+            <span class="term-prompt-arrow">></span>
+            <input type="text" id="term-input" class="term-input-field" placeholder="Type a command (e.g. sp_rti, fleet, whoami)..." autocomplete="off" spellcheck="false">
+            <button type="submit" class="btn-term-run">
+              <span>EXECUTE</span>
+              <i data-lucide="corner-down-left"></i>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ==================== 7. ABOUT ME WITH 3D SWINGING LANYARD ==================== -->
+      <section id="about" class="section about-space">
+        <div class="about-flex-container">
+          
+          <!-- Left Bio Dossier -->
+          <div class="about-dossier glass-hud">
+            <div class="dossier-tag">SOFTWARE DEVELOPER @ KASSAPOS • ANNA UNIVERSITY ALUMNUS</div>
+            <h2 class="dossier-heading">ABOUT ME<span class="brand-dot">.</span></h2>
+            <div class="header-red-underline left"></div>
+
+            <p class="bio-p lead">
+              I'm <strong>Anantha Krishnan P</strong>, a Full-Stack .NET &amp; Flutter Developer engineering high-availability enterprise logistics and supply chain platforms at Kassapos Software Solutions in Chennai since September 2023.
+            </p>
+
+            <p class="bio-p">
+              Originally from Tirunelveli / Kanyakumari, Tamil Nadu, I graduated with a B.E. in Computer Science &amp; Engineering from Anna University (2023) and hold a <strong>JLPT N5 Japanese language certification</strong> from the Japan Foundation. I specialize in designing robust backend architectures in <strong>C# &amp; ASP.NET MVC</strong>, building heavily optimized SQL Server databases, and crafting responsive mobile apps in <strong>Flutter</strong>.
+            </p>
+
+            <div class="bio-tech-section">
+              <h4 class="sec-label">PRIMARY TECHNOLOGIES</h4>
+              <div class="pill-group">
+                <span class="tech-glow-pill">C#</span>
+                <span class="tech-glow-pill">ASP.NET MVC</span>
+                <span class="tech-glow-pill">MS SQL Server</span>
+                <span class="tech-glow-pill">Flutter</span>
+                <span class="tech-glow-pill">Dart</span>
+                <span class="tech-glow-pill">JavaScript</span>
+                <span class="tech-glow-pill">jQWidgets</span>
+                <span class="tech-glow-pill">REST APIs</span>
+                <span class="tech-glow-pill">Entity Framework</span>
+              </div>
+            </div>
+
+            <div class="bio-focus-section">
+              <h4 class="sec-label">AREAS OF EXPERTISE</h4>
+              <div class="focus-capsules">
+                <span class="focus-cap">Enterprise Logistics &amp; ERP</span>
+                <span class="focus-cap">Full-Stack .NET Architecture</span>
+                <span class="focus-cap">Database Performance Tuning</span>
+                <span class="focus-cap">RTI Payroll Automation</span>
+                <span class="focus-cap">Cross-Platform Flutter Apps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: The Hanging 3D Lanyard ID Badge -->
+          <div class="lanyard-rig-container">
+            <div class="lanyard-anchor-pin"></div>
+            
+            <!-- Triangle Strings -->
+            <svg class="lanyard-strings-svg" viewBox="0 0 200 120">
+              <line x1="100" y1="0" x2="30" y2="120" stroke="#71717a" stroke-width="2" />
+              <line x1="100" y1="0" x2="170" y2="120" stroke="#71717a" stroke-width="2" />
+              <circle cx="30" cy="120" r="3" fill="#ff2a4b" />
+              <circle cx="170" cy="120" r="3" fill="#ff2a4b" />
+            </svg>
+
+            <!-- Swinging ID Card -->
+            <div id="swinging-badge" class="lanyard-badge-card glass-hud">
+              <div class="badge-holo-sheen"></div>
+              <div class="badge-avatar-wrap">
+                <img src="krishna_avatar.png" alt="Anantha Krishnan" class="badge-avatar-img">
+              </div>
+              <h3 class="badge-name-text">ANANTHA KRISHNAN</h3>
+              <p class="badge-title-sub">FULL-STACK .NET DEVELOPER</p>
+              <div class="badge-org-pill">KASSAPOS SOLUTIONS • CHENNAI</div>
+              
+              <div class="badge-barcode-lines">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="badge-sub-code">// BE CSE • JLPT N5 CERTIFIED</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 8. EDUCATION & CERTIFICATIONS ==================== -->
+      <section id="credentials" class="section credentials-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">ACADEMICS &amp; CERTIFICATIONS</span>
+          <h2 class="main-header-glitch">EDUCATION &amp; ACCREDITATIONS<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="credentials-grid">
+          
+          <!-- Degree Card -->
+          <div class="credential-card glass-hud">
+            <div class="cred-watermark">CSE</div>
+            <div class="cred-top-icon">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <h3 class="cred-title">Bachelor of Engineering in Computer Science</h3>
+            <div class="cred-org">ANNA UNIVERSITY // 2019 – 2023</div>
+            <p class="cred-desc">
+              Graduated with a comprehensive computer science curriculum covering advanced Data Structures, Relational Database Management (RDBMS), Object-Oriented Analysis &amp; Design (OOAD), and Operating Systems.
+            </p>
+            <div class="cred-meta-list">
+              <div class="cred-meta-row">
+                <span>CAMPUS / LOCATION:</span>
+                <strong>Tirunelveli, Tamil Nadu, India</strong>
+              </div>
+              <div class="cred-meta-row">
+                <span>ACCREDITATION LEVEL:</span>
+                <strong>EQF Level 6 (Engineering)</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- JLPT Certification Card -->
+          <div class="credential-card glass-hud">
+            <div class="cred-watermark">日本語</div>
+            <div class="cred-top-icon">
+              <i data-lucide="languages"></i>
+            </div>
+            
+            <div class="jp-kanji-badge">
+              <i data-lucide="award"></i> <span>日本語能力試験 N5 認定</span>
+            </div>
+
+            <h3 class="cred-title">JLPT N5 – Japanese Language Proficiency Test</h3>
+            <div class="cred-org">JAPAN FOUNDATION &amp; JEES</div>
+            <p class="cred-desc">
+              Officially certified in Japanese language proficiency. Possesses strong competence in reading Kanji, Hiragana, Katakana, basic communicative listening, and sentence structure fundamentals.
+            </p>
+            <div class="cred-meta-list">
+              <div class="cred-meta-row">
+                <span>ISSUING BODY:</span>
+                <strong>The Japan Foundation</strong>
+              </div>
+              <div class="cred-meta-row">
+                <span>LANGUAGE COMPETENCY:</span>
+                <strong>Reading, Writing, Listening &amp; Grammar</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== 9. TECHNICAL SKILLS & VERTICAL GLASS TECH STACK ==================== -->
+      <section id="skills" class="section skills-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">WHAT I WORK WITH</span>
+          <h2 class="main-header-glitch">TECHNICAL SKILLS<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <!-- 6 Skills Cards -->
+        <div class="skills-duo-grid">
+          
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Enterprise .NET Web</h3>
+              <span class="level-badge adv">ADVANCED</span>
+            </div>
+            <p class="skill-sub">C# • ASP.NET MVC • .NET CORE • WEB API • LINQ</p>
+          </div>
+
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Database Systems &amp; SQL</h3>
+              <span class="level-badge adv">ADVANCED</span>
+            </div>
+            <p class="skill-sub">MS SQL SERVER • STORED PROCEDURES • T-SQL • INDEXING</p>
+          </div>
+
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Mobile App Development</h3>
+              <span class="level-badge prof">PROFICIENT</span>
+            </div>
+            <p class="skill-sub">FLUTTER • DART • ANDROID • REST API INTEGRATION</p>
+          </div>
+
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Frontend &amp; UI Controls</h3>
+              <span class="level-badge prof">PROFICIENT</span>
+            </div>
+            <p class="skill-sub">JAVASCRIPT • JQUERY • JQWIDGETS • HTML5 • CSS3 • BOOTSTRAP</p>
+          </div>
+
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Architecture &amp; State Machines</h3>
+              <span class="level-badge adv">ADVANCED</span>
+            </div>
+            <p class="skill-sub">ENTERPRISE ERP • RTI ENGINES • RBAC SECURITY • REST APIS</p>
+          </div>
+
+          <div class="skill-hud-box glass-hud">
+            <div class="skill-hud-header">
+              <h3 class="skill-name">Reporting &amp; Engineering Tools</h3>
+              <span class="level-badge prof">PROFICIENT</span>
+            </div>
+            <p class="skill-sub">CRYSTAL REPORTS • ITEXTSHARP • GIT • DOCKER • POSTMAN</p>
+          </div>
+
+        </div>
+
+        <!-- TALL VERTICAL PHONE-SHAPED GLASS CARDS -->
+        <div class="tech-stack-vertical-section">
+          <div class="section-title-wrap small">
+            <span class="sub-header-red">LANGUAGES &amp; FRAMEWORKS</span>
+            <h3 class="stack-glitch-title" data-text="MY TECH STACK.">MY TECH STACK<span class="brand-dot">.</span></h3>
+          </div>
+
+          <div class="vertical-glass-carousel">
+            
+            <!-- C# -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon purple"><span class="cs-text-badge">C#</span></div>
+              <span class="slab-tech-name">C#</span>
+            </div>
+
+            <!-- ASP.NET MVC -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon purple"><span class="net-text-badge">.NET</span></div>
+              <span class="slab-tech-name">ASP.NET MVC</span>
+            </div>
+
+            <!-- SQL Server -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon sql-orange"><span class="sql-text-badge">SQL</span></div>
+              <span class="slab-tech-name">SQL Server</span>
+            </div>
+
+            <!-- Flutter -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon flutter-blue"><i data-lucide="smartphone"></i></div>
+              <span class="slab-tech-name">Flutter</span>
+            </div>
+
+            <!-- Dart -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon flutter-blue"><i data-lucide="code-2"></i></div>
+              <span class="slab-tech-name">Dart</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon yellow"><span class="js-text-badge">JS</span></div>
+              <span class="slab-tech-name">JavaScript</span>
+            </div>
+
+            <!-- jQuery & jQWidgets -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon teal"><i data-lucide="table"></i></div>
+              <span class="slab-tech-name">jQWidgets</span>
+            </div>
+
+            <!-- Crystal Reports -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon cyan"><i data-lucide="file-spreadsheet"></i></div>
+              <span class="slab-tech-name">Crystal Reports</span>
+            </div>
+
+            <!-- Git & Docker -->
+            <div class="vertical-slab glass-hud">
+              <div class="slab-glow-aurora"></div>
+              <div class="slab-logo-icon blue"><i data-lucide="container"></i></div>
+              <span class="slab-tech-name">Git &amp; Docker</span>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==================== 10. CONTACT SECTION ==================== -->
+      <section id="contact" class="section contact-space">
+        <div class="section-title-wrap">
+          <span class="sub-header-red">LET'S CONNECT</span>
+          <h2 class="main-header-glitch">CONTACT<span class="brand-dot">.</span></h2>
+          <div class="header-red-underline"></div>
+        </div>
+
+        <div class="contact-terminal-box glass-hud">
+          
+          <div class="direct-inquiry-ribbon">
+            <div class="inquiry-left">
+              <span class="ribbon-lbl">DIRECT INQUIRIES &amp; COLLABORATION</span>
+              <div class="inquiry-links-row">
+                <a href="mailto:ananthakrishnan1177@gmail.com" class="ribbon-email">
+                  <i data-lucide="mail"></i> ananthakrishnan1177@gmail.com
+                </a>
+                <a href="tel:+918838098841" class="ribbon-email">
+                  <i data-lucide="phone"></i> (+91) 8838098841
+                </a>
+              </div>
+            </div>
+            <div class="inquiry-right">
+              <span class="green-live-dot"></span> OPEN FOR ENTERPRISE ARCHITECTURE OPPORTUNITIES
+            </div>
+          </div>
+
+          <form id="cyber-contact-form" class="cyber-form-grid">
+            <div class="row-duo">
+              <div class="field-item">
+                <label>YOUR NAME</label>
+                <input type="text" placeholder="Your Name" required>
+              </div>
+              <div class="field-item">
+                <label>YOUR EMAIL</label>
+                <input type="email" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+
+            <div class="field-item">
+              <label>PROJECT SCOPE / MESSAGE</label>
+              <textarea rows="4" placeholder="Describe your software requirements, enterprise module, or architectural inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-send-message">
+              <span>Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Cockpit Footer -->
+    <footer class="cockpit-footer">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="brand-red">K</span>RISHNAN<span class="brand-dot">.</span>
+          <p>FULL-STACK .NET &amp; FLUTTER DEVELOPER • CHENNAI, INDIA</p>
+        </div>
+
+        <div class="footer-social-capsules">
+          <a href="https://github.com/ananthakrishnan17" target="_blank" class="soc-pill"><i data-lucide="github"></i> GITHUB</a>
+          <a href="https://www.linkedin.com/in/anantha-krishnan17/" target="_blank" class="soc-pill"><i data-lucide="linkedin"></i> LINKEDIN</a>
+          <a href="https://ananthakrishnan17.github.io/portfolio/" target="_blank" class="soc-pill"><i data-lucide="globe"></i> PORTFOLIO</a>
+          <a href="https://wa.me/918838098841" target="_blank" class="soc-pill"><i data-lucide="message-circle"></i> WHATSAPP</a>
+          <a href="Ananthakrishnan_Resume.pdf" download="Ananthakrishnan_Resume.pdf" class="soc-pill"><i data-lucide="file-down"></i> RESUME (PDF)</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>© 2026 ANANTHA KRISHNAN P. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
