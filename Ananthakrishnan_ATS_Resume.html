@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anantha Krishnan P - Software Development Engineer (SDE-2) Resume</title>
+  <title>Anantha Krishnan P - Software Engineer Resume</title>
   <style>
     @page {
       size: A4 portrait;
-      margin: 8mm 12mm 8mm 12mm;
+      margin: 9mm 12mm 9mm 12mm;
     }
     
     * {
@@ -18,8 +18,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 8.8pt;
-      line-height: 1.26;
+      font-size: 8.85pt;
+      line-height: 1.28;
       color: #1e293b;
       background: #ffffff;
       -webkit-print-color-adjust: exact;
@@ -36,12 +36,12 @@
     .header {
       text-align: center;
       border-bottom: 1.5px solid #0f172a;
-      padding-bottom: 4px;
-      margin-bottom: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     .candidate-name {
-      font-size: 18pt;
+      font-size: 18.5pt;
       font-weight: 700;
       letter-spacing: 0.5px;
       color: #0f172a;
@@ -54,7 +54,7 @@
       font-size: 9.8pt;
       font-weight: 600;
       color: #0369a1;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .contact-row {
@@ -62,7 +62,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 5px 12px;
-      font-size: 8.3pt;
+      font-size: 8.35pt;
       color: #475569;
     }
 
@@ -78,46 +78,51 @@
 
     /* Sections - Pure Linear Flow */
     .section {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .section-title {
-      font-size: 9.4pt;
+      font-size: 9.5pt;
       font-weight: 700;
       text-transform: uppercase;
       color: #0f172a;
       letter-spacing: 0.5px;
       border-bottom: 1px solid #cbd5e1;
-      padding-bottom: 1px;
-      margin-bottom: 3px;
+      padding-bottom: 1.5px;
+      margin-bottom: 3.5px;
     }
 
     /* Summary */
     .summary-text {
       text-align: justify;
       color: #334155;
-      font-size: 8.5pt;
-      line-height: 1.27;
+      font-size: 8.65pt;
+      line-height: 1.30;
     }
 
-    /* Skills - Pure Linear Block */
+    /* Skills - With Aligned Continuation Lines */
     .skills-block {
       display: flex;
       flex-direction: column;
-      gap: 1.5px;
-      font-size: 8.4pt;
+      gap: 2.2px;
+      font-size: 8.45pt;
     }
 
     .skill-line {
+      display: flex;
+      align-items: baseline;
       color: #334155;
-      line-height: 1.25;
+      line-height: 1.27;
     }
 
     .skill-label {
+      flex: 0 0 162px;
       font-weight: 600;
       color: #0f172a;
-      display: inline-block;
-      min-width: 155px;
+    }
+
+    .skill-val {
+      flex: 1;
     }
 
     /* Experience */
@@ -129,11 +134,11 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 1px;
+      margin-bottom: 2px;
     }
 
     .exp-role-title {
-      font-size: 9.1pt;
+      font-size: 9.2pt;
       font-weight: 600;
       color: #0f172a;
     }
@@ -144,46 +149,46 @@
     }
 
     .exp-date-loc {
-      font-size: 8.2pt;
+      font-size: 8.35pt;
       color: #475569;
       text-align: right;
     }
 
     .bullet-list {
       list-style-type: disc;
-      margin-left: 15px;
+      margin-left: 16px;
       padding-left: 0;
       margin-top: 1px;
     }
 
     .bullet-list li {
-      margin-bottom: 1.6px;
+      margin-bottom: 2.2px;
       color: #334155;
-      font-size: 8.4pt;
+      font-size: 8.55pt;
       text-align: justify;
-      line-height: 1.25;
+      line-height: 1.27;
     }
 
     /* Projects */
     .proj-item {
-      margin-bottom: 3px;
+      margin-bottom: 3.5px;
     }
 
     .proj-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.5px;
+      margin-bottom: 1px;
     }
 
     .proj-title {
-      font-size: 8.8pt;
+      font-size: 8.95pt;
       font-weight: 600;
       color: #0f172a;
     }
 
     .proj-tech {
-      font-size: 7.9pt;
+      font-size: 8pt;
       color: #0284c7;
       font-style: italic;
     }
@@ -197,7 +202,7 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 8.45pt;
+      font-size: 8.55pt;
     }
 
     .edu-degree {
@@ -207,16 +212,16 @@
 
     .edu-inst {
       color: #475569;
-      font-size: 8.1pt;
+      font-size: 8.2pt;
     }
 
     .cert-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 8.35pt;
+      font-size: 8.45pt;
       color: #334155;
-      margin-bottom: 1px;
+      margin-bottom: 1.5px;
     }
 
     .cert-name {
@@ -241,7 +246,7 @@
     <!-- HEADER -->
     <header class="header">
       <h1 class="candidate-name">Anantha Krishnan P</h1>
-      <div class="candidate-role">Software Development Engineer (SDE-2) | Full-Stack .NET &amp; Applied AI</div>
+      <div class="candidate-role">Software Engineer | Full-Stack .NET &amp; Cloud / Applied AI</div>
       <div class="contact-row" style="margin-bottom: 2px;">
         <span class="contact-item">Chennai, Tamil Nadu, India</span>
         <span class="contact-sep">&bull;</span>
@@ -258,65 +263,63 @@
       </div>
     </header>
 
-    <!-- PROFESSIONAL SUMMARY -->
+    <!-- PROFESSIONAL SUMMARY (Clean 3-Line Summary) -->
     <section class="section">
       <h2 class="section-title">Summary</h2>
       <p class="summary-text">
-        Software Development Engineer (SDE-2) with 3 years of enterprise experience building scalable backend services, distributed retail POS systems, and practical AI automation pipelines. Core expertise in <strong>.NET 8, C#, ASP.NET Core Web API, PostgreSQL, and AWS</strong>. Experienced in designing offline-first synchronization with SQLite and NATS JetStream across 15+ store branches, tuning ClickHouse for analytical reporting, fine-tuning PyTorch Document Transformer models for automated purchase bill digitization, and securing cloud infrastructure with Cloudflare Zero Trust.
+        Software Engineer with 3 years of enterprise experience building scalable backend services, distributed retail POS systems, and practical AI automation pipelines. Proficient in <strong>.NET 8, C#, ASP.NET Core Web API, PostgreSQL, and AWS</strong>. Experienced in designing offline-first POS synchronization using SQLite and NATS JetStream, tuning ClickHouse for analytical reporting, fine-tuning document Transformer models for purchase invoice parsing, and securing cloud deployments with Cloudflare Zero Trust.
       </p>
     </section>
 
-    <!-- TECHNICAL SKILLS (Pure Linear Block) -->
+    <!-- TECHNICAL SKILLS (Pure Linear Block with Aligned Continuation) -->
     <section class="section">
       <h2 class="section-title">Technical Skills</h2>
       <div class="skills-block">
         <div class="skill-line">
           <span class="skill-label">Languages &amp; Backend:</span>
-          <span>C#, .NET 8, ASP.NET Core Web API, Entity Framework Core, Dapper, Python, Dart, SQL</span>
+          <span class="skill-val">C#, .NET 8, ASP.NET Core Web API, Entity Framework Core, Dapper, Python, Dart, SQL</span>
         </div>
         <div class="skill-line">
           <span class="skill-label">Databases &amp; Caching:</span>
-          <span>PostgreSQL (AWS RDS Read Replicas, PgBouncer), ClickHouse, MS SQL Server, Redis, SQLite</span>
+          <span class="skill-val">PostgreSQL (AWS RDS Read Replicas, PgBouncer), ClickHouse, MS SQL Server, Redis, SQLite</span>
         </div>
         <div class="skill-line">
           <span class="skill-label">Distributed Systems:</span>
-          <span>NATS JetStream, RabbitMQ, Clean Architecture, CQRS, Outbox Pattern, RESTful APIs</span>
+          <span class="skill-val">NATS JetStream, RabbitMQ, Clean Architecture, CQRS, Outbox Pattern, RESTful APIs</span>
         </div>
         <div class="skill-line">
           <span class="skill-label">Applied AI &amp; Tooling:</span>
-          <span>PyTorch, Transformers (LayoutLM / TrOCR), Colab T4 GPU Fine-Tuning, Invoice OCR, Model Context Protocol (MCP)</span>
+          <span class="skill-val">PyTorch, Transformers (LayoutLM / TrOCR), Colab T4 GPU Fine-Tuning, Invoice OCR, Model Context Protocol (MCP)</span>
         </div>
         <div class="skill-line">
           <span class="skill-label">Cloud, Security &amp; DevOps:</span>
-          <span>AWS (EC2, RDS, S3, CloudWatch), Cloudflare Zero Trust Tunnels (Closed RDP/SSH), Docker, Nginx, GitHub Actions</span>
+          <span class="skill-val">AWS (EC2, RDS, S3, CloudWatch), Cloudflare Zero Trust Tunnels (Closed RDP/SSH), Docker, Nginx, GitHub Actions</span>
         </div>
         <div class="skill-line">
           <span class="skill-label">Frontend &amp; Peripherals:</span>
-          <span>React, TypeScript, Tailwind CSS, Tauri Desktop POS, Flutter, ESC/POS Thermal Printers, 2D Barcode Scanners</span>
+          <span class="skill-val">React, TypeScript, Tailwind CSS, Tauri Desktop POS, Flutter, ESC/POS Thermal Printers, 2D Barcode Scanners</span>
         </div>
       </div>
     </section>
 
-    <!-- WORK EXPERIENCE -->
+    <!-- WORK EXPERIENCE (Strongest 6 Grounded Bullets) -->
     <section class="section">
       <h2 class="section-title">Work Experience</h2>
       <div class="exp-item">
         <div class="exp-header">
           <div>
-            <span class="exp-role-title">Software Development Engineer (SDE-2)</span> &mdash; 
+            <span class="exp-role-title">Software Engineer</span> &mdash; 
             <span class="exp-company">Kassapos Software Solutions</span>
           </div>
           <div class="exp-date-loc">09/2023 &ndash; Present | Chennai, India</div>
         </div>
         <ul class="bullet-list">
-          <li>Architected and developed core multi-tenant backend APIs for <em>Angadii</em> Retail ERP using .NET 8, C#, and PostgreSQL, supporting 15+ retail store branches and 40+ POS edge terminals.</li>
-          <li>Engineered an offline-first POS sync engine using SQLite and NATS JetStream, allowing store checkouts to operate with zero interruption during internet drops and processing 1,500+ daily sales transactions per store.</li>
-          <li>Offloaded heavy accounting and ledger queries from transactional PostgreSQL to ClickHouse Materialized Views, reducing large report generation time from ~30s down to &lt;1.5s across 100,000+ transaction rows.</li>
-          <li>Configured PostgreSQL master-slave replication on AWS RDS (db.t4g) with PgBouncer connection pooling, resolving connection pool starvation during peak billing hours.</li>
-          <li>Hardened AWS EC2 production servers by closing public RDP (3389) and SSH (22) inbound ports, routing all database and developer access through encrypted Cloudflare Zero Trust tunnels.</li>
-          <li>Integrated a fine-tuned PyTorch document extraction pipeline into the desktop software, automating vendor invoice data capture and reducing manual purchase entry time by ~70%.</li>
-          <li>Conducted code reviews, enforced async .NET safety, index optimization, and repository testing standards, mentoring junior engineers on clean architectural practices.</li>
-          <li>Designed database schemas, stored procedures, and audit trail ledgers for enterprise logistics modules, automating driver incentive calculations and role-based access control.</li>
+          <li>Architected and developed core multi-tenant backend APIs and business logic for <em>Angadii</em> Retail ERP using .NET 8, C#, and PostgreSQL, supporting retail supermarket branches and multi-lane checkout terminals.</li>
+          <li>Engineered an offline-first POS sync engine using local SQLite storage and NATS JetStream, enabling continuous checkout during network outages with automatic transactional replay on reconnection.</li>
+          <li>Offloaded heavy accounting and ledger queries from transactional PostgreSQL to ClickHouse Materialized Views, reducing complex multi-year reporting latency from tens of seconds to near real-time without locking OLTP tables.</li>
+          <li>Configured PostgreSQL master-slave replication on AWS RDS with PgBouncer connection pooling, preventing connection exhaustion and maintaining throughput stability under peak store billing hours.</li>
+          <li>Hardened AWS EC2 infrastructure by removing direct public SSH (22) and RDP (3389) port exposure, routing developer and database access securely through Cloudflare Zero Trust tunnels.</li>
+          <li>Fine-tuned document Transformer models (LayoutLM / TrOCR) with PyTorch on Google Colab (T4 GPU) on scanned vendor invoices, integrating automated field extraction into the desktop POS software to eliminate manual purchase entry.</li>
         </ul>
       </div>
     </section>
@@ -331,34 +334,34 @@
           <span class="proj-tech">.NET 8, PostgreSQL, ClickHouse, NATS JetStream, Redis, React/Tauri</span>
         </div>
         <ul class="bullet-list">
-          <li>Built a high-throughput multi-store retail ERP orchestrating inventory sync, barcode scanning, split tenders, and statutory GST e-invoicing.</li>
-          <li>Implemented the Outbox Pattern with NATS JetStream to ensure reliable, at-least-once delivery of sales events to ClickHouse for analytical reporting without degrading transactional database throughput.</li>
+          <li>Built a multi-store retail ERP platform managing inventory synchronization, barcode checkouts, split-tender payments, and statutory GST e-invoicing.</li>
+          <li>Implemented the Outbox Pattern with NATS JetStream to guarantee reliable event delivery to ClickHouse for analytical reporting without degrading transactional database throughput.</li>
         </ul>
       </div>
 
       <div class="proj-item">
         <div class="proj-header">
-          <span class="proj-title">Automated Purchase Bill OCR &amp; Template Analysis Pipeline</span>
+          <span class="proj-title">Automated Purchase Invoice Parser &amp; Template Pipeline</span>
           <span class="proj-tech">Python, PyTorch, Hugging Face (LayoutLM / TrOCR), Google Colab T4, C#</span>
         </div>
         <ul class="bullet-list">
-          <li>Fine-tuned Document Transformer models on 300+ scanned tax invoices, achieving 88%+ field-level extraction accuracy for vendor name, GSTIN, invoice date, and tabular line-item totals.</li>
-          <li>Engineered an invoice layout analysis module that parses scanned bill templates and programmatically generates matching print and data schemas, accelerating onboarding for new supplier formats.</li>
+          <li>Built a document intelligence pipeline fine-tuned on vendor tax invoices to extract vendor names, GSTIN, invoice dates, and itemized table totals into the desktop billing software.</li>
+          <li>Engineered an invoice layout analysis module to inspect scanned bill formats and generate matching print and data capture schemas, accelerating new supplier onboarding.</li>
         </ul>
       </div>
 
       <div class="proj-item">
         <div class="proj-header">
-          <span class="proj-title">Zero-Trust Cloud Infrastructure &amp; Custom MCP Tooling Hub</span>
+          <span class="proj-title">Zero-Trust Cloud Infrastructure &amp; Tooling Hub</span>
           <span class="proj-tech">AWS EC2/RDS, Cloudflare Tunnels, Custom MCP Server Tools, Docker</span>
         </div>
         <ul class="bullet-list">
-          <li>Eliminated public attack surfaces on AWS production servers by deploying Cloudflare Zero Trust tunnels; authored custom Model Context Protocol (MCP) server endpoints for automated database diagnostics and backend operations.</li>
+          <li>Secured AWS production environments by routing private subnet operations through Cloudflare Zero Trust tunnels; authored custom Model Context Protocol (MCP) server endpoints for automated database diagnostics and backend checks.</li>
         </ul>
       </div>
     </section>
 
-    <!-- EDUCATION (Linear Flow) -->
+    <!-- EDUCATION (Accurate College Name) -->
     <section class="section">
       <h2 class="section-title">Education</h2>
       <div class="edu-block">
@@ -366,18 +369,18 @@
           <span class="edu-degree">Bachelor of Engineering (B.E.) in Computer Science &amp; Engineering</span>
           <span>2019 &ndash; 2023</span>
         </div>
-        <div class="edu-inst">Anna University Affiliated Engineering College | Tirunelveli, Tamil Nadu, India</div>
+        <div class="edu-inst">Anna University Regional Campus, Tirunelveli | Tamil Nadu, India</div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS & LANGUAGES (Linear Flow) -->
+    <!-- CERTIFICATIONS & LANGUAGES -->
     <section class="section">
       <h2 class="section-title">Certifications &amp; Languages</h2>
       <div class="cert-row">
         <span><strong class="cert-name">JLPT N5 (Japanese Language Proficiency Test)</strong> &mdash; The Japan Foundation</span>
         <span>Certified (Dec 2023)</span>
       </div>
-      <div style="font-size: 8.2pt; color: #475569; margin-top: 2px;">
+      <div style="font-size: 8.2pt; color: #475569; margin-top: 1.5px;">
         <strong>Languages:</strong> English (Professional Working Proficiency), Tamil (Native), Japanese (Basic - JLPT N5)
       </div>
     </section>
