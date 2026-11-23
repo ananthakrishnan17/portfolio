@@ -94,7 +94,7 @@
 
     /* Summary */
     .summary-text {
-      text-align: justify;
+      text-align: left;
       color: #334155;
       font-size: 8.65pt;
       line-height: 1.30;
@@ -165,7 +165,7 @@
       margin-bottom: 2.2px;
       color: #334155;
       font-size: 8.55pt;
-      text-align: justify;
+      text-align: left;
       line-height: 1.27;
     }
 
@@ -321,9 +321,9 @@
           <li>Architected and developed core multi-tenant backend APIs and business logic for <em>Angadii</em> Retail ERP using .NET 8, C#, and PostgreSQL, supporting retail supermarket branches and multi-lane checkout terminals.</li>
           <li>Engineered an offline-first POS sync engine using local SQLite storage and NATS JetStream, enabling continuous checkout during network outages with automatic transactional replay on reconnection.</li>
           <li>Moved analytical reporting from transactional PostgreSQL to ClickHouse, syncing catalog metadata via PostgreSQL WAL logical replication and streaming sales/ledger outbox events via NATS JetStream; reduced multi-branch ledger and sales report query times from ~30s to under 2s.</li>
-          <li>Configured PostgreSQL master-slave replication on AWS RDS with PgBouncer connection pooling, preventing connection exhaustion and maintaining throughput stability under peak store billing hours.</li>
+          <li>Configured AWS RDS PostgreSQL read replicas with PgBouncer connection pooling, preventing connection exhaustion and maintaining throughput stability under peak store billing hours.</li>
           <li>Hardened AWS EC2 infrastructure by removing direct public SSH (22) and RDP (3389) port exposure, routing developer and database access securely through Cloudflare Zero Trust tunnels.</li>
-          <li>Authored unit and integration test suites with xUnit and Postman to validate critical ledger transactions and billing APIs, incorporating Playwright for end-to-end desktop checkout regression flows.</li>
+          <li>Wrote xUnit unit/integration tests and Postman API tests for ledger and billing workflows; added Playwright checkout regression tests.</li>
           <li>Fine-tuned document Transformer models (LayoutLM / TrOCR) with PyTorch on Google Colab (T4 GPU) on scanned vendor invoices, integrating automated field extraction into the desktop POS software to reduce manual purchase data entry.</li>
         </ul>
       </div>
