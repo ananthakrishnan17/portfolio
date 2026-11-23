@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anantha Krishnan P - SDE-2 Full-Stack .NET & Applied AI Engineer Resume</title>
+  <title>Anantha Krishnan P - Software Engineer Resume</title>
   <style>
     @page {
       size: A4 portrait;
-      margin: 7.5mm 11mm 7.5mm 11mm;
+      margin: 10mm 13mm 10mm 13mm;
     }
     
     * {
@@ -18,9 +18,9 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 8.85pt;
-      line-height: 1.25;
-      color: #1a1a1a;
+      font-size: 9.1pt;
+      line-height: 1.33;
+      color: #222222;
       background: #ffffff;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -35,15 +35,15 @@
     /* Header */
     .header {
       text-align: center;
-      border-bottom: 2px solid #0f172a;
-      padding-bottom: 4px;
-      margin-bottom: 5px;
+      border-bottom: 1.5px solid #1e293b;
+      padding-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     .candidate-name {
-      font-size: 18pt;
-      font-weight: 800;
-      letter-spacing: 0.6px;
+      font-size: 19pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       color: #0f172a;
       text-transform: uppercase;
       line-height: 1.1;
@@ -51,11 +51,10 @@
     }
 
     .candidate-role {
-      font-size: 9.8pt;
-      font-weight: 700;
-      color: #0369a1;
-      margin-bottom: 3px;
-      letter-spacing: 0.2px;
+      font-size: 10.2pt;
+      font-weight: 600;
+      color: #0284c7;
+      margin-bottom: 4px;
     }
 
     .contact-row {
@@ -63,93 +62,90 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 5px 12px;
-      font-size: 8.25pt;
-      color: #334155;
-      line-height: 1.2;
+      font-size: 8.5pt;
+      color: #475569;
     }
 
     .contact-item a {
       color: #0369a1;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .contact-sep {
       color: #94a3b8;
-      font-weight: bold;
     }
 
-    /* Section Styles */
+    /* Sections */
     .section {
-      margin-bottom: 4.5px;
+      margin-bottom: 6.5px;
     }
 
     .section-title {
-      font-size: 9.3pt;
-      font-weight: 800;
+      font-size: 9.8pt;
+      font-weight: 700;
       text-transform: uppercase;
       color: #0f172a;
       letter-spacing: 0.5px;
-      border-bottom: 1.2px solid #cbd5e1;
+      border-bottom: 1px solid #cbd5e1;
       padding-bottom: 1.5px;
-      margin-bottom: 2.5px;
+      margin-bottom: 3.5px;
     }
 
     /* Summary */
     .summary-text {
       text-align: justify;
       color: #334155;
-      font-size: 8.5pt;
-      line-height: 1.26;
+      font-size: 8.85pt;
+      line-height: 1.34;
     }
 
-    /* Skills Table */
+    /* Skills */
     .skills-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 8.35pt;
+      font-size: 8.7pt;
     }
 
     .skills-category {
-      font-weight: 700;
+      font-weight: 600;
       color: #0f172a;
-      width: 165px;
+      width: 155px;
       vertical-align: top;
-      padding: 0.8px 0;
+      padding: 1.2px 0;
     }
 
     .skills-list {
       color: #334155;
       vertical-align: top;
-      padding: 0.8px 0;
+      padding: 1.2px 0;
     }
 
     /* Experience */
     .exp-item {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 1px;
+      margin-bottom: 1.5px;
     }
 
     .exp-role-title {
-      font-size: 9.15pt;
-      font-weight: 700;
+      font-size: 9.35pt;
+      font-weight: 600;
       color: #0f172a;
     }
 
     .exp-company {
-      font-weight: 700;
-      color: #0369a1;
+      font-weight: 600;
+      color: #0284c7;
     }
 
     .exp-date-loc {
-      font-size: 8.2pt;
-      font-weight: 600;
+      font-size: 8.4pt;
       color: #475569;
       text-align: right;
     }
@@ -162,90 +158,84 @@
 
     .bullet-list li {
       position: relative;
-      padding-left: 11px;
-      margin-bottom: 1.6px;
+      padding-left: 12px;
+      margin-bottom: 2px;
       color: #334155;
-      font-size: 8.38pt;
+      font-size: 8.65pt;
       text-align: justify;
-      line-height: 1.24;
+      line-height: 1.30;
     }
 
     .bullet-list li::before {
       content: "•";
       position: absolute;
       left: 1px;
-      color: #0369a1;
+      color: #0284c7;
       font-weight: bold;
-      font-size: 8.8pt;
+      font-size: 9.5pt;
       line-height: 1;
-    }
-
-    .bullet-list li strong {
-      color: #0f172a;
     }
 
     /* Projects */
     .proj-item {
-      margin-bottom: 2.5px;
+      margin-bottom: 3.5px;
     }
 
     .proj-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.5px;
+      margin-bottom: 1px;
     }
 
     .proj-title {
-      font-size: 8.85pt;
-      font-weight: 700;
+      font-size: 9pt;
+      font-weight: 600;
       color: #0f172a;
     }
 
     .proj-tech {
-      font-size: 7.75pt;
-      font-weight: 600;
+      font-size: 8pt;
       color: #0284c7;
       font-style: italic;
     }
 
-    /* Education & Certs Row */
+    /* Education & Certs */
     .edu-certs-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 12px;
+      gap: 16px;
     }
 
     .edu-item, .cert-item {
-      font-size: 8.35pt;
+      font-size: 8.65pt;
     }
 
     .edu-degree {
-      font-weight: 700;
+      font-weight: 600;
       color: #0f172a;
     }
 
     .edu-college {
-      color: #0369a1;
-      font-weight: 600;
+      color: #0284c7;
     }
 
     .edu-sub {
       color: #64748b;
-      font-size: 7.8pt;
+      font-size: 8pt;
       display: flex;
       justify-content: space-between;
       margin-top: 1px;
     }
 
     .cert-title {
-      font-weight: 700;
+      font-weight: 600;
       color: #0f172a;
     }
 
     .cert-sub {
       color: #64748b;
-      font-size: 7.8pt;
+      font-size: 8pt;
       display: flex;
       justify-content: space-between;
       margin-top: 1px;
@@ -268,9 +258,9 @@
     <!-- HEADER -->
     <header class="header">
       <h1 class="candidate-name">Anantha Krishnan P</h1>
-      <div class="candidate-role">Software Development Engineer - II (SDE-2) | Full-Stack .NET &amp; Applied AI</div>
+      <div class="candidate-role">Software Development Engineer (SDE-2) | Full-Stack .NET &amp; Applied AI</div>
       <div class="contact-row" style="margin-bottom: 2px;">
-        <span class="contact-item">Chennai / Tirunelveli, Tamil Nadu, India</span>
+        <span class="contact-item">Chennai / Tirunelveli, India</span>
         <span class="contact-sep">&bull;</span>
         <span class="contact-item">(+91) 88380 98841</span>
         <span class="contact-sep">&bull;</span>
@@ -287,94 +277,100 @@
 
     <!-- PROFESSIONAL SUMMARY -->
     <section class="section">
-      <h2 class="section-title">Professional Summary</h2>
+      <h2 class="section-title">Summary</h2>
       <p class="summary-text">
-        Hands-on <strong>Software Development Engineer - II (SDE-2)</strong> with <strong>3 years of enterprise experience</strong> designing and shipping high-throughput SaaS platforms, distributed edge-POS architectures, and applied AI automation pipelines. Core technical background in <strong>.NET Core 8 / C#, AWS (EC2, RDS Master-Slave), ClickHouse OLAP, NATS JetStream, and PostgreSQL</strong>. Experienced in fine-tuning <strong>PyTorch Transformer / Tiny Document AI models</strong> (Google Colab T4 GPUs) for automated purchase bill data extraction, authoring custom <strong>Model Context Protocol (MCP) tools</strong>, and implementing <strong>Cloudflare Zero Trust tunnels</strong> for production-grade security.
+        Software Engineer with 3 years of experience in backend development, distributed systems, and applied AI integrations. Proficient in C#, .NET Core, PostgreSQL, AWS, and event-driven architectures using NATS JetStream and ClickHouse. Experienced in fine-tuning small document models (PyTorch) for invoice parsing, developing custom Model Context Protocol (MCP) tools, and securing cloud infrastructure with Cloudflare Zero Trust.
       </p>
     </section>
 
-    <!-- TECHNICAL COMPETENCIES -->
+    <!-- TECHNICAL SKILLS -->
     <section class="section">
-      <h2 class="section-title">Technical Competencies</h2>
+      <h2 class="section-title">Technical Skills</h2>
       <table class="skills-table">
         <tr>
-          <td class="skills-category">Backend &amp; Frameworks:</td>
-          <td class="skills-list">.NET Core 8, C#, ASP.NET Core Web API, ASP.NET MVC, Clean Architecture, CQRS, MediatR, Outbox Pattern, REST APIs, EF Core, Dapper</td>
+          <td class="skills-category">Languages &amp; Frameworks:</td>
+          <td class="skills-list">C#, .NET Core 8, ASP.NET Web API, ASP.NET MVC, Entity Framework Core, Dapper, Python, Dart</td>
         </tr>
         <tr>
-          <td class="skills-category">Applied AI &amp; Document AI:</td>
-          <td class="skills-list">PyTorch, Hugging Face Transformers, Microsoft Tiny Document Models, Colab T4 GPU Fine-Tuning, Invoice OCR, Template Cloning, Model Context Protocol (Custom MCP Servers/Tools, Serena, Playwright), Context Engineering</td>
+          <td class="skills-category">Databases &amp; Caching:</td>
+          <td class="skills-list">PostgreSQL (RDS Master-Slave, PgBouncer), ClickHouse, MS SQL Server, Redis, SQLite</td>
         </tr>
         <tr>
-          <td class="skills-category">Databases &amp; Event Brokers:</td>
-          <td class="skills-list">PostgreSQL (AWS RDS Master-Slave Replication, PgBouncer), ClickHouse (OLAP Materialized Views), NATS JetStream, Redis (Distributed Caching/Locks), SQLite (Edge)</td>
+          <td class="skills-category">Messaging &amp; Architecture:</td>
+          <td class="skills-list">NATS JetStream, RabbitMQ, Clean Architecture, CQRS, Outbox Pattern, RESTful APIs</td>
+        </tr>
+        <tr>
+          <td class="skills-category">Applied AI &amp; Tooling:</td>
+          <td class="skills-list">PyTorch, Hugging Face Transformers, Tiny Document Models, Colab T4 Training, OCR, Model Context Protocol (MCP)</td>
         </tr>
         <tr>
           <td class="skills-category">Cloud, Security &amp; DevOps:</td>
-          <td class="skills-list">AWS (EC2, RDS, S3, CloudWatch), Cloudflare Zero Trust Tunnels (Closed RDP 3389 / SSH 22 Ports), Docker, Nginx Reverse Proxy, Git, CI/CD</td>
+          <td class="skills-list">AWS (EC2, RDS, S3, CloudWatch), Cloudflare Tunnels (Zero Trust), Docker, Nginx, Git, CI/CD</td>
         </tr>
         <tr>
-          <td class="skills-category">Frontend, Mobile &amp; HW:</td>
-          <td class="skills-list">React 18, TypeScript, Tailwind CSS, Tauri Desktop POS, Flutter (Android), Barcode &amp; RFID Scanners, ESC/POS Thermal Printers</td>
+          <td class="skills-category">Frontend &amp; Mobile:</td>
+          <td class="skills-list">React, TypeScript, Tailwind CSS, Flutter, Desktop POS (Tauri), Thermal Printers (ESC/POS), Barcode HW</td>
         </tr>
       </table>
     </section>
 
     <!-- PROFESSIONAL EXPERIENCE -->
     <section class="section">
-      <h2 class="section-title">Professional Experience</h2>
+      <h2 class="section-title">Work Experience</h2>
       <div class="exp-item">
         <div class="exp-header">
           <div>
-            <span class="exp-role-title">Software Development Engineer - II (SDE-2)</span> &mdash; 
+            <span class="exp-role-title">Software Development Engineer</span> &mdash; 
             <span class="exp-company">Kassapos Software Solutions</span>
           </div>
           <div class="exp-date-loc">09/2023 &ndash; Present | Chennai, India</div>
         </div>
         <ul class="bullet-list">
-          <li><strong>Document AI &amp; Purchase Bill Automation:</strong> Fine-tuned Microsoft Tiny Document Models &amp; Transformers using <strong>PyTorch on Google Colab T4 GPUs</strong>; integrated the model into the desktop billing software to automatically extract key-value data (line items, GST rates, totals) from scanned vendor purchase bills, cutting manual data entry by 85%.</li>
-          <li><strong>Bill Template Analysis &amp; Auto-Replication:</strong> Developed an ML-driven invoice layout analysis pipeline that inspects scanned bill templates and programmatically generates matching print/data schemas, enabling instant onboarding for new vendor formats.</li>
-          <li><strong>Agentic Tooling &amp; Custom MCP Engineering:</strong> Engineered custom Model Context Protocol (MCP) server tools (<span style="font-family:monospace; font-size:8pt;">angadii_ops_mcp</span>, <span style="font-family:monospace; font-size:8pt;">angadii_code_mcp</span>) and integrated Serena &amp; Playwright MCP servers to automate contextual backend operations and browser verification workflows.</li>
-          <li><strong>Distributed Edge-POS Sync &amp; Resilience:</strong> Engineered an offline-first Edge Sync engine using the <strong>Outbox Pattern</strong> and <strong>NATS JetStream</strong>; ensured <strong>100% continuous checkout uptime</strong> across 50+ retail stores during physical network outages with deterministic SQLite conflict resolution.</li>
-          <li><strong>Database Scaling &amp; Hybrid OLAP Pipeline:</strong> Configured <strong>PostgreSQL Master-Slave architecture on AWS RDS</strong> with PgBouncer connection pooling; replicated transactional events into <strong>ClickHouse Materialized Views</strong>, accelerating multi-branch ledger reports by <strong>98% (42s to 250ms)</strong>.</li>
-          <li><strong>Zero-Trust Cloud Infrastructure Hardening:</strong> Hardened AWS EC2 production servers by closing all public RDP (3389) and SSH (22) inbound ports; architected secure remote operations via encrypted <strong>Cloudflare Zero Trust tunnels (<span style="font-family:monospace; font-size:8pt;">cloudflared</span>)</strong>.</li>
-          <li><strong>Enterprise Logistics &amp; Financial Accounting:</strong> Designed double-entry general ledger schemas and automated driver RTI payroll algorithms in ASP.NET Core, slashing monthly payroll calculation turnaround by 60% with zero calculation discrepancies.</li>
+          <li>Developed core backend services and multi-tenant APIs for <em>Angadii</em>, a retail ERP and billing platform, using C#, .NET Core 8, and PostgreSQL.</li>
+          <li>Implemented an offline-first edge sync engine using SQLite and NATS JetStream, enabling retail store terminals to process checkouts during network outages and automatically sync data on reconnection.</li>
+          <li>Fine-tuned lightweight document Transformer models using PyTorch on Google Colab (T4 GPU) to extract line items, taxes, and totals from vendor purchase bills into the desktop billing software.</li>
+          <li>Built an invoice template analysis pipeline to inspect scanned bill formats and generate matching print and data capture schemas for faster supplier onboarding.</li>
+          <li>Configured PostgreSQL master-slave replication on AWS RDS and connected ClickHouse via materialized replication to offload heavy reporting queries from the transactional database.</li>
+          <li>Hardened server infrastructure on AWS EC2 by closing public RDP and SSH ports, routing developer and database access through Cloudflare Zero Trust tunnels.</li>
+          <li>Authored custom Model Context Protocol (MCP) tools and integrated Serena and Playwright servers to support automated codebase checks and end-to-end testing flows.</li>
+          <li>Designed database schemas, stored procedures, and financial ledger logic for enterprise logistics modules, including driver incentive calculations and role-based access control.</li>
         </ul>
       </div>
     </section>
 
-    <!-- FEATURED ENTERPRISE & AI PROJECTS -->
+    <!-- KEY PROJECTS -->
     <section class="section">
-      <h2 class="section-title">Key Engineering &amp; AI Projects</h2>
+      <h2 class="section-title">Key Projects</h2>
       
       <div class="proj-item">
         <div class="proj-header">
-          <span class="proj-title">Angadii Retail SaaS ERP &amp; Edge-POS with Document AI</span>
-          <span class="proj-tech">.NET Core 8, PyTorch, Colab T4, ClickHouse, NATS, PostgreSQL, React/Tauri</span>
+          <span class="proj-title">Angadii Retail Cloud ERP &amp; POS</span>
+          <span class="proj-tech">.NET Core 8, PostgreSQL, ClickHouse, NATS JetStream, Redis, PyTorch</span>
         </div>
         <ul class="bullet-list">
-          <li>Engineered a high-throughput retail SaaS ERP integrating offline-first edge terminals, ClickHouse OLAP reporting, and local PyTorch Document AI for automated purchase bill scanning and invoice template replication.</li>
-          <li>Optimized checkout lane latency from 2.8s to &lt;350ms (87% performance gain) utilizing in-memory barcode lookup caching and Redis distributed locks.</li>
+          <li>Multi-tenant retail management system supporting offline-first point-of-sale billing, centralized multi-store inventory synchronization, and statutory GST e-invoicing.</li>
+          <li>Integrated local Document AI models for automated vendor bill digitization and ClickHouse for sub-second analytical reporting across store chains.</li>
         </ul>
       </div>
 
       <div class="proj-item">
         <div class="proj-header">
-          <span class="proj-title">Zero-Trust Cloud Infrastructure &amp; Custom MCP Server Hub</span>
-          <span class="proj-tech">AWS EC2/RDS, Cloudflare Tunnels, Custom MCP Server Tools, Docker, Nginx</span>
+          <span class="proj-title">Zero-Trust Cloud Infrastructure &amp; Tooling Hub</span>
+          <span class="proj-tech">AWS EC2/RDS, Cloudflare Tunnels, Docker, Custom MCP Servers</span>
         </div>
         <ul class="bullet-list">
-          <li>Eliminated public attack surfaces on AWS servers by routing all admin access through Cloudflare Zero Trust tunnels; built custom MCP tools to automate backend ops and live diagnostic monitoring.</li>
+          <li>Configured private subnet infrastructure on AWS with zero open management ports, utilizing Cloudflare Tunnels and containerized services for secure access.</li>
+          <li>Created custom MCP server utilities to streamline operational diagnostics, database maintenance, and deployment verification.</li>
         </ul>
       </div>
 
       <div class="proj-item">
         <div class="proj-header">
-          <span class="proj-title">Enterprise Logistics &amp; Fleet Operations Platform</span>
-          <span class="proj-tech">ASP.NET MVC, C#, MS SQL Server, Flutter, REST APIs, Crystal Reports</span>
+          <span class="proj-title">Enterprise Logistics &amp; Gate-Pass Management</span>
+          <span class="proj-tech">ASP.NET MVC, C#, MS SQL Server, Flutter, Crystal Reports</span>
         </div>
         <ul class="bullet-list">
-          <li>Delivered end-to-end logistics platform managing fleet operations, yard gate-pass scanning via Flutter mobile app, and automated Driver RTI incentive payroll calculation.</li>
+          <li>Built freight management workflows covering vehicle dispatch tracking, automated driver incentive payroll calculations, and barcode-based yard movement verification via a Flutter mobile application.</li>
         </ul>
       </div>
     </section>
@@ -386,7 +382,7 @@
         <div>
           <h2 class="section-title">Education</h2>
           <div class="edu-item">
-            <div class="edu-degree">Bachelor of Engineering (B.E.) in CSE</div>
+            <div class="edu-degree">B.E. in Computer Science &amp; Engineering</div>
             <div class="edu-college">Anna University, Chennai</div>
             <div class="edu-sub">
               <span>Tirunelveli, Tamil Nadu</span>
@@ -399,14 +395,14 @@
         <div>
           <h2 class="section-title">Certifications &amp; Languages</h2>
           <div class="cert-item">
-            <div class="cert-title">JLPT N5 (Japanese Language Proficiency)</div>
+            <div class="cert-title">JLPT N5 (Japanese Language Proficiency Test)</div>
             <div class="cert-sub">
               <span>The Japan Foundation</span>
               <span>Certified</span>
             </div>
           </div>
           <div class="cert-item" style="margin-top: 2px;">
-            <div style="font-size: 8.05pt; color: #334155;">
+            <div style="font-size: 8.2pt; color: #475569;">
               <strong>Languages:</strong> English (Professional), Tamil (Native), Japanese (Basic)
             </div>
           </div>
