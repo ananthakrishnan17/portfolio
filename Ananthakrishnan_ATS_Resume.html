@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anantha Krishnan P - Software Engineer Resume</title>
+  <title>Anantha Krishnan P - Software Engineer (.NET Backend, Cloud & Applied AI) Resume</title>
   <style>
     @page {
       size: A4 portrait;
@@ -246,7 +246,7 @@
     <!-- HEADER -->
     <header class="header">
       <h1 class="candidate-name">Anantha Krishnan P</h1>
-      <div class="candidate-role">Software Engineer | Full-Stack .NET &amp; Cloud / Applied AI</div>
+      <div class="candidate-role">Software Engineer | .NET Backend, Cloud &amp; Applied AI</div>
       <div class="contact-row" style="margin-bottom: 2px;">
         <span class="contact-item">Chennai, Tamil Nadu, India</span>
         <span class="contact-sep">&bull;</span>
@@ -263,15 +263,15 @@
       </div>
     </header>
 
-    <!-- PROFESSIONAL SUMMARY (Clean 3-Line Summary) -->
+    <!-- PROFESSIONAL SUMMARY -->
     <section class="section">
       <h2 class="section-title">Summary</h2>
       <p class="summary-text">
-        Software Engineer with 3 years of enterprise experience building scalable backend services, distributed retail POS systems, and practical AI automation pipelines. Proficient in <strong>.NET 8, C#, ASP.NET Core Web API, PostgreSQL, and AWS</strong>. Experienced in designing offline-first POS synchronization using SQLite and NATS JetStream, tuning ClickHouse for analytical reporting, fine-tuning document Transformer models for purchase invoice parsing, and securing cloud deployments with Cloudflare Zero Trust.
+        Software Engineer with 3 years of enterprise experience in backend systems, distributed edge architectures, and applied AI. Proficient in <strong>.NET 8, C#, ASP.NET Core Web API, PostgreSQL, and AWS</strong>. Experienced in designing offline-first POS synchronization using SQLite and NATS JetStream, moving analytical reporting workloads to ClickHouse, fine-tuning document Transformer models for purchase invoice parsing, and securing cloud deployments with Cloudflare Zero Trust.
       </p>
     </section>
 
-    <!-- TECHNICAL SKILLS (Pure Linear Block with Aligned Continuation) -->
+    <!-- TECHNICAL SKILLS -->
     <section class="section">
       <h2 class="section-title">Technical Skills</h2>
       <div class="skills-block">
@@ -302,7 +302,7 @@
       </div>
     </section>
 
-    <!-- WORK EXPERIENCE (Strongest 6 Grounded Bullets) -->
+    <!-- WORK EXPERIENCE -->
     <section class="section">
       <h2 class="section-title">Work Experience</h2>
       <div class="exp-item">
@@ -316,10 +316,10 @@
         <ul class="bullet-list">
           <li>Architected and developed core multi-tenant backend APIs and business logic for <em>Angadii</em> Retail ERP using .NET 8, C#, and PostgreSQL, supporting retail supermarket branches and multi-lane checkout terminals.</li>
           <li>Engineered an offline-first POS sync engine using local SQLite storage and NATS JetStream, enabling continuous checkout during network outages with automatic transactional replay on reconnection.</li>
-          <li>Offloaded heavy accounting and ledger queries from transactional PostgreSQL to ClickHouse Materialized Views, reducing complex multi-year reporting latency from tens of seconds to near real-time without locking OLTP tables.</li>
+          <li>Moved analytical reporting workloads from transactional PostgreSQL to ClickHouse via logical replication, reducing complex multi-year ledger query times from ~30s to under 2s and reducing CPU load on the primary database.</li>
           <li>Configured PostgreSQL master-slave replication on AWS RDS with PgBouncer connection pooling, preventing connection exhaustion and maintaining throughput stability under peak store billing hours.</li>
           <li>Hardened AWS EC2 infrastructure by removing direct public SSH (22) and RDP (3389) port exposure, routing developer and database access securely through Cloudflare Zero Trust tunnels.</li>
-          <li>Fine-tuned document Transformer models (LayoutLM / TrOCR) with PyTorch on Google Colab (T4 GPU) on scanned vendor invoices, integrating automated field extraction into the desktop POS software to eliminate manual purchase entry.</li>
+          <li>Fine-tuned document Transformer models (LayoutLM / TrOCR) with PyTorch on Google Colab (T4 GPU) on scanned vendor invoices, integrating automated field extraction into the desktop POS software to reduce manual purchase data entry.</li>
         </ul>
       </div>
     </section>
@@ -334,8 +334,8 @@
           <span class="proj-tech">.NET 8, PostgreSQL, ClickHouse, NATS JetStream, Redis, React/Tauri</span>
         </div>
         <ul class="bullet-list">
-          <li>Built a multi-store retail ERP platform managing inventory synchronization, barcode checkouts, split-tender payments, and statutory GST e-invoicing.</li>
-          <li>Implemented the Outbox Pattern with NATS JetStream to guarantee reliable event delivery to ClickHouse for analytical reporting without degrading transactional database throughput.</li>
+          <li>Built a multi-store retail ERP platform with React/TypeScript (Tauri) desktop POS clients supporting barcode checkouts, thermal printing, and statutory GST e-invoicing.</li>
+          <li>Implemented transactional outbox publishing with retries, at-least-once delivery, and consumer deduplication for ClickHouse reporting events.</li>
         </ul>
       </div>
 
@@ -361,7 +361,7 @@
       </div>
     </section>
 
-    <!-- EDUCATION (Accurate College Name) -->
+    <!-- EDUCATION -->
     <section class="section">
       <h2 class="section-title">Education</h2>
       <div class="edu-block">
